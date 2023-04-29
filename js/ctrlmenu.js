@@ -1,15 +1,10 @@
-function showHome() {
-  $('#productionList').load('./html/home.html');
+function showMainOption(sidebar) {
+  $('#productionList').load(`./html/${sidebar}.html`);
   w3_close();
 }
 
 function showAlbum() {
   $('#productionList').load('./html/album.html');
-  w3_close();
-}
-
-function showContact() {
-  $('#productionList').load('./html/contact.html');
   w3_close();
 }
 
