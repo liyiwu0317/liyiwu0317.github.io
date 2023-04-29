@@ -1,4 +1,44 @@
-function showKtown4u() {
+function showHome() {
+  $('#productionList').load('./html/home.html');
+  w3_close();
+}
+
+function showAlbum() {
+  $('#productionList').load('./html/album.html');
+  w3_close();
+}
+
+function showContact() {
+  $('#productionList').load('./html/contact.html');
+  w3_close();
+}
+
+function showK4(type) {
+  $('#productionList').load(`./html/k4/${type}.html`);
+  w3_close();
+}
+
+function showSR(type) {
+  $('#productionList').load(`./html/sr/${type}.html`);
+  w3_close();
+}
+
+function showProduct(platform) {
+  $('#productionList').load(`./html/${platform}/main.html`);
+  w3_close();
+}
+
+// show option
+function showPlatform() {
+  var x = document.getElementById("platform");
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else {
+    x.className = x.className.replace(" w3-show", "");
+  }
+}
+
+function showK4Option() {
   var x = document.getElementById("ktown4u");
   if (x.className.indexOf("w3-show") == -1) {
     x.className += " w3-show";
@@ -7,28 +47,7 @@ function showKtown4u() {
   }
 }
 
-function showKtown4uLimited() {
-  $('#productionList').load('./html/k4-limit.html');
-}
-
-function showKtown4uABC() {
-  $('#productionList').load('./html/k4-abc.html');
-}
-
-function showKtown4uD() {
-  $('#productionList').load('./html/k4-d.html');
-}
-
-function showSRABC() {
-  $('#productionList').load('./html/sr-abc.html');
-}
-
-function showSRD() {
-  $('#productionList').load('./html/sr-d.html');
-}
-
-
-function showStarRiver() {
+function showSROption() {
   var x = document.getElementById("starRiver");
   if (x.className.indexOf("w3-show") == -1) {
     x.className += " w3-show";
