@@ -8,13 +8,8 @@ function showAlbum() {
   w3_close();
 }
 
-function showK4(type) {
-  $('#productionList').load(`./html/k4/${type}.html`);
-  w3_close();
-}
-
-function showSR(type) {
-  $('#productionList').load(`./html/sr/${type}.html`);
+function showEvent(type) {
+  $('#productionList').load(`./html/event/${type}.html`);
   w3_close();
 }
 
@@ -24,26 +19,8 @@ function showProduct(platform) {
 }
 
 // show option
-function showPlatform() {
-  var x = document.getElementById("platform");
-  if (x.className.indexOf("w3-show") == -1) {
-    x.className += " w3-show";
-  } else {
-    x.className = x.className.replace(" w3-show", "");
-  }
-}
-
-function showK4Option() {
-  var x = document.getElementById("ktown4u");
-  if (x.className.indexOf("w3-show") == -1) {
-    x.className += " w3-show";
-  } else {
-    x.className = x.className.replace(" w3-show", "");
-  }
-}
-
-function showSROption() {
-  var x = document.getElementById("starRiver");
+function showOption(id) {
+  var x = document.getElementById(id);
   if (x.className.indexOf("w3-show") == -1) {
     x.className += " w3-show";
   } else {
