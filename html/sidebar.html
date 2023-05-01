@@ -2,18 +2,22 @@
 <nav class="w3-sidebar w3-bar-block w3-white w3-collapse w3-top" style="z-index:3;width:250px" id="mySidebar">
   <div class="w3-container w3-display-container w3-padding-16">
     <i onclick="w3_close()" class="fa fa-remove w3-hide-large w3-button w3-display-topright"></i>
-    <h3 class="w3-wide"><b>李龙馥</b></h3>
+    <h3 class="w3-wide"><b>专辑购买资讯</b></h3>
   </div>
   <div class="w3-padding-64 w3-large w3-text-grey" style="font-weight:bold">
     <!-- Home -->
-    <a onclick="showMainOption('home')" href="javascript:void(0)" class="w3-bar-item w3-button">首页</a>
+    <a onclick="showMainOption('home')" href="javascript:void(0)" class="w3-bar-item w3-button">
+      <i class="fa-solid fa-house"></i><span class="w3-margin-left">首页</span>
+    </a>
 
     <!-- Album -->
-    <a onclick="showMainOption('album')" href="javascript:void(0)" class="w3-bar-item w3-button">专辑配置</a>
+    <a onclick="showMainOption('album')" href="javascript:void(0)" class="w3-bar-item w3-button">
+      <i class="fa-solid fa-compact-disc"></i><span class="w3-margin-left">专辑配置</span>
+    </a>
 
     <!-- Buy -->
     <a onclick="showOption('platform')" href="javascript:void(0)" class="w3-button w3-block w3-white w3-left-align" id="myBtn">
-      购买连结 <i class="fa fa-caret-down"></i>
+      <i class="fa-solid fa-cart-shopping"></i><span class="w3-margin-left w3-margin-right">购买连结</span><i class="fa fa-caret-down"></i>
     </a>
     <div id="platform" class="w3-bar-block w3-hide w3-padding-large w3-medium">
       <a onclick="showProduct('k4')" href="#" class="w3-bar-item w3-button">K4</a>
@@ -27,7 +31,7 @@
 
     <!-- Event -->
     <a onclick="showOption('event')" chref="javascript:void(0)" class="w3-button w3-block w3-white w3-left-align" id="myBtn">
-      1+1/2+2平台特典 <i class="fa fa-caret-down"></i>
+      <i class="fa-solid fa-cart-shopping"></i><span class="w3-margin-left w3-margin-right">1+1/2+2平台特典</span><i class="fa fa-caret-down"></i>
     </a>
 
     <div id="event" class="w3-bar-block w3-hide w3-padding-large w3-medium">
@@ -36,13 +40,21 @@
     </div>
 
     <!-- Q & A -->
-    <a onclick="showMainOption('goods')" href="javascript:void(0)" class="w3-bar-item w3-button">自制特典</a>
+    <a onclick="showMainOption('goods')" href="javascript:void(0)" class="w3-bar-item w3-button">
+      <i class="fa-solid fa-gem"></i><span class="w3-margin-left">自制特典</span>
+    </a>
 
     <!-- Q & A -->
-    <a onclick="showMainOption('question')" href="javascript:void(0)" class="w3-bar-item w3-button">常见问题</a>
+    <a onclick="showMainOption('question')" href="javascript:void(0)" class="w3-bar-item w3-button">
+      <i class="fa-solid fa-comment"></i><span class="w3-margin-left">常见问题</span>
+    </a>
   </div>
 
   <!-- Contact -->
-  <a href="#footer" onclick="showMainOption('contact')" href="javascript:void(0)" class="w3-bar-item w3-button">联络我们</a> 
-  <a href="#footer" onclick="showMainOption('version')" href="javascript:void(0)" class="w3-bar-item w3-button">版本资讯</a> 
+  <a href="#footer" onclick="showMainOption('contact')" href="javascript:void(0)" class="w3-bar-item w3-button">
+    <i class="fa-solid fa-envelope"></i><span class="w3-margin-left">联络我们</span>
+  </a> 
+  <a href="#footer" onclick="showMainOption('version')" href="javascript:void(0)" class="w3-bar-item w3-button">
+    <i class="fa-solid fa-circle-info"></i><span class="w3-margin-left">版本资讯</span>
+  </a> 
 </nav>
