@@ -12,8 +12,31 @@
   </div>
 </h3>
 
+<!-- Filter -->
+<h3 class="row w3-container w3-padding-16">
+  <div class="col">
+    <select id="nonBackPlatformSelection" class="form-select" onchange="onPlatformChanged(this, 'non-back', 'nonBackBrandSelection');">
+      <option selected>选择版本</option>
+      <option value="abc">普版</option>
+      <option value="d">D版</option>
+    </select>
+  </div>
+
+  <div class="col">
+    <select id="nonBackBrandSelection" class="form-select" onchange="onBrandChanged(this, 'non-back', 'nonBackPlatformSelection');">
+      <option selected>选择特典</option>
+      <option value="sw">SW</option>
+      <option value="yes24">YES24</option>
+      <option value="mp">MP</option>
+      <option value="jyp">JYP</option>
+      <option value="mk">MK</option>
+      <option value="bdm">BDM</option>
+    </select>
+  </div>
+</h3>
+
 <div class="w3-row">
-  <div class="w3-col l3 s6">
+  <div id="non-back-feiChina-abc-k4" class="w3-col l3 s6">
     <div class="w3-container c-card-fixed">
       <div class="w3-display-container">
         <img src="./images/k4-abc.jpg" style="width:100%">
@@ -28,7 +51,7 @@
     </div>
   </div>
 
-  <div class="w3-col l3 s6">
+  <div id="non-back-feiChina-d-k4" class="w3-col l3 s6">
     <div class="w3-container c-card-fixed">
       <div class="w3-display-container">
         <img src="./images/k4-d.jpg" style="width:100%">
@@ -43,7 +66,7 @@
     </div>
   </div>
 
-  <div class="w3-col l3 s6">
+  <div id="non-back-feiChina-abc-am" class="w3-col l3 s6">
     <div class="w3-container c-card-fixed">
       <div class="w3-display-container">
         <img src="./images/sr-event-non-back_am.jpg" style="width:100%">
@@ -64,7 +87,7 @@
     </div>
   </div>
 
-  <div class="w3-col l3 s6">
+  <div id="non-back-feiChina-abc-bdm" class="w3-col l3 s6">
     <div class="w3-container c-card-fixed">
       <div class="w3-display-container">
         <img src="./images/bdm-event.jpg" style="width:100%">
@@ -85,7 +108,7 @@
     </div>
   </div>
 
-  <div class="w3-col l3 s6">
+  <div id="non-back-gem-abc-yes24" class="w3-col l3 s6">
     <div class="w3-container c-card-fixed">
       <div class="w3-display-container">
         <img src="./images/yes24-event.jpg" style="width:100%">
@@ -106,7 +129,7 @@
     </div>
   </div>
 
-  <div class="w3-col l3 s6">
+  <div id="non-back-gem-abc-sw" class="w3-col l3 s6">
     <div class="w3-container c-card-fixed">
       <div class="w3-display-container">
         <img src="./images/sw-event.jpg" style="width:100%">
@@ -127,7 +150,7 @@
     </div>
   </div>
 
-  <div class="w3-col l3 s6">
+  <div id="non-back-gem-abc-mp" class="w3-col l3 s6">
     <div class="w3-container c-card-fixed">
       <div class="w3-display-container">
         <img src="./images/mp-event.jpg" style="width:100%">
@@ -148,7 +171,7 @@
     </div>
   </div>
 
-  <div class="w3-col l3 s6">
+  <div id="non-back-feiChina-d-mk-yes24" class="w3-col l3 s6">
     <div class="w3-container c-card-fixed">
       <div class="w3-display-container">
         <img src="./images/wd-event-back_mk_yes24.jpg" style="width:100%">
@@ -172,7 +195,7 @@
     </div>
   </div>
 
-  <div class="w3-col l3 s6">
+  <div id="non-back-gem-abc-k4" class="w3-col l3 s6">
     <div class="w3-container c-card-fixed">
       <div class="w3-display-container">
         <img src="./images/k4-event.jpg" style="width:100%">

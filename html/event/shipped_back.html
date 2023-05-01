@@ -5,8 +5,31 @@
   </div>
 </h3>
 
+<!-- Filter -->
+<h3 class="row w3-container w3-padding-16">
+  <div class="col">
+    <select id="backPlatformSelection" class="form-select" onchange="onPlatformChanged(this, 'back', 'backBrandSelection');">
+      <option selected>选择版本</option>
+      <option value="abc">普版</option>
+      <option value="d">D版</option>
+    </select>
+  </div>
+
+  <div class="col">
+    <select id="backBrandSelection" class="form-select" onchange="onBrandChanged(this, 'back', 'backPlatformSelection');">
+      <option selected>选择特典</option>
+      <option value="sw">SW</option>
+      <option value="yes24">YES24</option>
+      <option value="mp">MP</option>
+      <option value="jyp">JYP</option>
+      <option value="mk">MK</option>
+      <option value="bdm">BDM</option>
+    </select>
+  </div>
+</h3>
+
 <div class="w3-row">
-  <div class="w3-col l3 s6">
+  <div id="back-feiChina-abc-am" class="w3-col l3 s6">
     <div class="w3-container c-card-fixed">
       <div class="w3-display-container">
         <img src="./images/sr-event-back-abc_am.jpg" style="width:100%">
@@ -49,7 +72,7 @@
   </div> -->
 
   <!-- 宝石 -->
-  <div class="w3-col l3 s6">
+  <div id="back-gem-d-am" class="w3-col l3 s6">
     <div class="w3-container c-card-fixed">
       <div class="w3-display-container">
         <img src="./images/gem-sr-event-back-d_am.jpg" style="width:100%">
@@ -70,7 +93,7 @@
     </div>
   </div>
 
-  <div class="w3-col l3 s6">
+  <div id="back-feiChina-abc-mp" class="w3-col l3 s6">
     <div class="w3-container c-card-fixed">
       <div class="w3-display-container">
         <img src="./images/kram-event-back_mp.jpg" style="width:100%">
@@ -91,7 +114,7 @@
     </div>
   </div>
 
-  <div class="w3-col l3 s6">
+  <div id="back-gem-abc-mp" class="w3-col l3 s6">
     <div class="w3-container c-card-fixed">
       <div class="w3-display-container">
         <img src="./images/gem-kram-event-back_mp.jpg" style="width:100%">
@@ -112,7 +135,7 @@
     </div>
   </div>
 
-  <div class="w3-col l3 s6">
+  <div id="back-feiChina-abc-sw" class="w3-col l3 s6">
     <div class="w3-container c-card-fixed c-card-fixed">
       <div class="w3-display-container">
         <img src="./images/kram-event-back_sw.jpg" style="width:100%">
@@ -133,7 +156,7 @@
     </div>
   </div>
 
-  <div class="w3-col l3 s6">
+  <div id="back-feiChina-abc-jyp" class="w3-col l3 s6">
     <div class="w3-container c-card-fixed">
       <div class="w3-display-container">
         <img src="./images/wd-event-back_jyp.jpg" style="width:100%">
@@ -154,7 +177,7 @@
     </div>
   </div>
 
-  <div class="w3-col l3 s6">
+  <div id="back-gem-abc-bdm" class="w3-col l3 s6">
     <div class="w3-container c-card-fixed">
       <div class="w3-display-container">
         <img src="./images/gem-kram-event-back_bdm.png" style="width:100%">
@@ -175,12 +198,12 @@
     </div>
   </div>
 
-  <div class="w3-col l3 s6">
+  <div id="back-feiChina-abc-yes24" class="w3-col l3 s6">
     <div class="w3-container c-card-fixed">
       <div class="w3-display-container">
         <img src="./images/kram-event-back_yes24.jpg" style="width:100%">
         <div class="w3-display-middle w3-display-hover">
-          <button class="w3-button w3-black" onClick="parent.open('https://shop1382036085.v.weidian.com/item.html?itemID=6268208790')" >购买 <i class="fa fa-shopping-cart"></i></button>
+          <button class="w3-button w3-black" onClick="parent.open('https://shop1382036085.v.weidian.com/item.html?itemID=6270253713')" >购买 <i class="fa fa-shopping-cart"></i></button>
         </div>
       </div>
       <div class="w3-margin-top w3-margin-bottom">
@@ -196,7 +219,7 @@
     </div>
   </div>
 
-  <div class="w3-col l3 s6">
+  <div id="back-feiChina-d-mk" class="w3-col l3 s6">
     <div class="w3-container c-card-fixed">
       <div class="w3-display-container">
         <img src="./images/wd-event-back_mk.jpg" style="width:100%">
@@ -217,7 +240,8 @@
     </div>
   </div>
 
-  <div class="w3-col l3 s6">
+  <!-- 售罄 -->
+  <!-- <div id="back-feiChina-d-yes24" class="w3-col l3 s6">
     <div class="w3-container c-card-fixed">
       <div class="w3-display-container">
         <img src="./images/yetimall-event-back_yes24.jpg" style="width:100%">
@@ -237,9 +261,9 @@
       <a href="https://weibo.com/6375947740/MEocn6PgG" target="_blank" class="c-a" >说明</a><br>
       <div class="w3-margin-bottom"><b>RMB 220</b></div>
     </div>
-  </div>
+  </div> -->
 
-  <div class="w3-col l3 s6">
+  <div id="back-gem-d-bdm" class="w3-col l3 s6">
     <div class="w3-container c-card-fixed">
       <div class="w3-display-container">
         <img src="./images/gem-yetimall-event-back_bdm.jpg" style="width:100%">
@@ -261,7 +285,7 @@
     </div>
   </div>
 
-  <div class="w3-col l3 s6">
+  <div id="back-gem-d-jyp" class="w3-col l3 s6">
     <div class="w3-container c-card-fixed">
       <div class="w3-display-container">
         <img src="./images/gem-wd-event-back_jyp.jpg" style="width:100%">
@@ -282,6 +306,30 @@
       </ul>
       <a href="https://weibo.com/5947554719/MEoSIyxuG" target="_blank" class="c-a" >说明</a><br>
       <div class="w3-margin-bottom"><b>RMB 240</b></div>
+    </div>
+  </div>
+
+  <div id="back-gem-d-yes24" class="w3-col l3 s6">
+    <div class="w3-container c-card-fixed">
+      <div class="w3-display-container">
+        <img src="./images/gem-wd-event-back_yes24.jpg" style="width:100%">
+        <div class="w3-display-middle w3-display-hover">
+          <button class="w3-button w3-black" onClick="parent.open('https://weidian.com/item.html?itemID=6270962563&spider_token=ef54')" >购买 <i class="fa fa-shopping-cart"></i></button>
+        </div>
+      </div>
+      <div class="w3-margin-top w3-margin-bottom">
+        <div>D版 2+2</div>
+        <span class="badge bg-primary-subtle border border-primary-subtle text-primary-emphasis rounded-pill">YES24</span>
+      </div>
+      <ul class="w3-small c-ul">
+        <li>黄铉辰+金昇玟</li>
+        <li>黄铉辰+李旻浩</li>
+        <li>金昇玟+李旻浩</li>
+        <li>李旻浩+韩知城</li>
+        <li>随机成员YES24特典卡 * 2</li>
+      </ul>
+      <a href="https://weibo.com/5947554719/MEzjYajD5" target="_blank" class="c-a" >说明</a><br>
+      <div class="w3-margin-bottom"><b>RMB 220</b></div>
     </div>
   </div>
 
