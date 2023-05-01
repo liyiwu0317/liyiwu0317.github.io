@@ -1,5 +1,5 @@
 const allVer = ['abc', 'd'];
-const allBrand = ['sw', 'yes24', 'mp', 'jyp', 'mk', 'bdm'];
+const allBrand = ['am', 'sw', 'yes24', 'mp', 'jyp', 'mk', 'bdm'];
 
 const backItems = [
   {
