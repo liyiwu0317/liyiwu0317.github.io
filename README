@@ -1,0 +1,2 @@
+cd /home/liyi/Downloads/Linux_x64_1084013_chrome-linux/chrome-linux
+./chrome --allow-file-access-from-files
