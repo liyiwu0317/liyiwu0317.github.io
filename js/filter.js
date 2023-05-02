@@ -3,6 +3,11 @@ const allBrand = ['am', 'sw', 'yes24', 'mp', 'jyp', 'mk', 'bdm'];
 
 const backItems = [
   {
+    id: 'back-feiChina-abc',
+    ver: 'abc',
+    brand: []
+  },
+  {
     id: 'back-feiChina-abc-am',
     ver: 'abc',
     brand: ['am']
@@ -28,6 +33,11 @@ const backItems = [
     brand: ['yes24']
   },
   {
+    id: 'back-feiChina-abc-bdm',
+    ver: 'abc',
+    brand: ['bdm']
+  },
+  {
     id: 'back-feiChina-d-mk',
     ver: 'd',
     brand: ['mk']
@@ -46,6 +56,21 @@ const backItems = [
     id: 'back-gem-abc-bdm',
     ver: 'abc',
     brand: ['bdm']
+  },
+  {
+    id: 'back-gem-abc-d-mp-sw-bdm',
+    ver: 'd',
+    brand: ['mp', 'sw', 'bdm']
+  },
+  {
+    id: 'back-gem-abc-d-yes24-sw-bdm',
+    ver: 'd',
+    brand: ['yes24', 'sw', 'bdm']
+  },
+  {
+    id: 'back-gem-d-yes24-jyp-bdm',
+    ver: 'd',
+    brand: ['yes24', 'jyp', 'bdm']
   },
   {
     id: 'back-gem-d-am',
