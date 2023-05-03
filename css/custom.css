@@ -2,6 +2,11 @@ h1,h2,h3,h4,h5,h6{
   line-height: 1.5;
 }
 
+img {
+  border: 1px solid #dfdfdf;
+  border-radius: 10px;
+}
+
 .c-ul {
   display: block;
   list-style-type: disc;
@@ -14,6 +19,15 @@ h1,h2,h3,h4,h5,h6{
 
 .c-a {
   color: gray;
+}
+
+.c-title {
+  font-weight: 600;
+}
+
+.c-price {
+  font-weight: 600;
+  color: #c62828;
 }
 
 @media only screen and (min-width: 601px) {

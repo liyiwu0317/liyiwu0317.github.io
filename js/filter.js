@@ -1,45 +1,45 @@
-const allVer = ['abc', 'd'];
+const allVer = ['limit', 'abc', 'd'];
 const allBrand = ['am', 'sw', 'yes24', 'mp', 'jyp', 'mk', 'bdm'];
 
 const backItems = [
   {
     id: 'back-feiChina-abc',
-    ver: 'abc',
+    ver: ['abc'],
     brand: []
   },
   {
     id: 'back-feiChina-abc-am',
-    ver: 'abc',
+    ver: ['abc'],
     brand: ['am']
   },
   {
     id: 'back-feiChina-abc-mp',
-    ver: 'abc',
+    ver: ['abc'],
     brand: ['mp']
   },
   {
     id: 'back-feiChina-abc-sw',
-    ver: 'abc',
+    ver: ['abc'],
     brand: ['sw']
   },
   {
     id: 'back-feiChina-abc-jyp',
-    ver: 'abc',
+    ver: ['abc'],
     brand: ['jyp']
   },
   {
     id: 'back-feiChina-abc-yes24',
-    ver: 'abc',
+    ver: ['abc'],
     brand: ['yes24']
   },
   {
     id: 'back-feiChina-abc-bdm',
-    ver: 'abc',
+    ver: ['abc'],
     brand: ['bdm']
   },
   {
     id: 'back-feiChina-d-mk',
-    ver: 'd',
+    ver: ['d'],
     brand: ['mk']
   },
   // {
@@ -49,47 +49,47 @@ const backItems = [
   // },
   {
     id: 'back-gem-abc-mp',
-    ver: 'abc',
+    ver: ['abc'],
     brand: ['mp']
   },
   {
     id: 'back-gem-abc-bdm',
-    ver: 'abc',
+    ver: ['abc'],
     brand: ['bdm']
   },
   {
     id: 'back-gem-abc-d-mp-sw-bdm',
-    ver: 'd',
+    ver: ['limit', 'abc', 'd'],
     brand: ['mp', 'sw', 'bdm']
   },
   {
     id: 'back-gem-abc-d-yes24-sw-bdm',
-    ver: 'd',
+    ver: ['limit', 'abc', 'd'],
     brand: ['yes24', 'sw', 'bdm']
   },
   {
     id: 'back-gem-d-yes24-jyp-bdm',
-    ver: 'd',
+    ver: ['d'],
     brand: ['yes24', 'jyp', 'bdm']
   },
   {
     id: 'back-gem-d-am',
-    ver: 'd',
+    ver: ['d'],
     brand: ['am']
   },
   {
     id: 'back-gem-d-bdm',
-    ver: 'd',
+    ver: ['d'],
     brand: ['bdm']
   },
   {
     id: 'back-gem-d-jyp',
-    ver: 'd',
+    ver: ['d'],
     brand: ['jyp']
   },
   {
     id: 'back-gem-d-yes24',
-    ver: 'd',
+    ver: ['d'],
     brand: ['yes24']
   }
 ]
@@ -97,47 +97,47 @@ const backItems = [
 const nonBackItems = [
   {
     id: 'non-back-feiChina-abc-k4',
-    ver: 'abc',
+    ver: ['abc'],
     brand: ['k4']
   },
   {
     id: 'non-back-feiChina-abc-am',
-    ver: 'abc',
+    ver: ['abc'],
     brand: ['am']
   },
   {
     id: 'non-back-feiChina-abc-bdm',
-    ver: 'abc',
+    ver: ['abc'],
     brand: ['bdm']
   },
   {
     id: 'non-back-feiChina-d-k4',
-    ver: 'd',
+    ver: ['d'],
     brand: ['k4']
   },
   {
     id: 'non-back-feiChina-d-mk-yes24',
-    ver: 'd',
+    ver: ['d'],
     brand: ['mk','yes24']
   },
   {
     id: 'non-back-gem-abc-yes24',
-    ver: 'abc',
+    ver: ['abc'],
     brand: ['yes24']
   },
   {
     id: 'non-back-gem-abc-sw',
-    ver: 'abc',
+    ver: ['abc'],
     brand: ['sw']
   },
   {
     id: 'non-back-gem-abc-mp',
-    ver: 'abc',
+    ver: ['abc'],
     brand: ['mp']
   },
   {
     id: 'non-back-gem-abc-k4',
-    ver: 'abc',
+    ver: ['abc'],
     brand: ['k4']
   }
 ]
@@ -154,7 +154,7 @@ function findMatchItems(items, ver, brand) {
   }
 
   items.forEach(x => {
-    if((!ver || x.ver === ver) && (!brand || x.brand.includes(brand))) {
+    if((!ver || x.ver.includes(ver)) && (!brand || x.brand.includes(brand))) {
       showItems.push(x.id);
     } else {
       hideItems.push(x.id);
