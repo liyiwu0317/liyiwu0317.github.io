@@ -1,5 +1,7 @@
-const allVer = ['limit', 'abc', 'd'];
-const allBrand = ['am', 'sw', 'yes24', 'mp', 'jyp', 'mk', 'bdm', 'kms', 'k4', 'wm', 'ms', 'yzy', 'sr', 'ny'];
+const Options = {
+  "ver": ["limit", "abc", "d"],
+  "brand": ["am", "sw", "yes24", "mp", "jyp", "mk", "bdm", "kms", "k4", "wm", "ms", "yzy", "sr", "ny"]
+}
 
 const backItems = [
   {
@@ -176,10 +178,10 @@ function findMatchItems(items, ver, brand) {
   let showItems = [];
   let hideItems = [];
 
-  if (!ver || !allVer.includes(ver)) {
+  if (!ver || !Options.ver.includes(ver)) {
     ver = null;
   }
-  if (!brand || !allBrand.includes(brand)) {
+  if (!brand || !Options.brand.includes(brand)) {
     brand = null;
   }
 
@@ -207,7 +209,7 @@ function changeToShow(id) {
 }
 
 function changeToHide(id) {
-  var x = document.getElementById(id);
+  let x = document.getElementById(id);
 
   if (x && x.className.indexOf("w3-hide") == -1) {
     x.className += " w3-hide";
@@ -237,6 +239,7 @@ function onPlatformChanged(option, page, otherSelection) {
 function onBrandChanged(option, page, otherSelection) {
   let brand = option.value;
   let ver = $(`#${otherSelection}`).val();
+  let items = [];
 
   if (page === 'back') items = backItems;
   else if (page === 'non-back') items = nonBackItems;
