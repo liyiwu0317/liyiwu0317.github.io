@@ -1,6 +1,23 @@
 const Options = {
   "ver": ["limit", "abc", "d"],
-  "brand": ["am", "sw", "yes24", "mp", "jyp", "mk", "bdm", "kms", "k4", "wm", "ms", "yzy", "sr", "ny"]
+  "brand": [
+    "am", 
+    "bdm", 
+    "bdn",
+    "el", 
+    "jyp",
+    "k4", 
+    "kms", 
+    "mk", 
+    "mp", 
+    "ms", 
+    "sw", 
+    "wm", 
+    "yes24", 
+    "yzy", 
+    "sr", 
+    "ny"
+  ]
 }
 
 const backItems = [
@@ -38,6 +55,21 @@ const backItems = [
     id: 'back-abc-ms-china',
     ver: ['abc'],
     brand: ['ms']
+  },
+  {
+    id: 'back-abc-sr-china',
+    ver: ['abc'],
+    brand: ['sr']
+  },
+  {
+    id: 'back-abc-el-china',
+    ver: ['abc'],
+    brand: ['el']
+  },
+  {
+    id: 'back-abc-kms-china',
+    ver: ['abc'],
+    brand: ['kms']
   },
   {
     id: 'back-abc-mp-gem',
@@ -88,6 +120,11 @@ const nonBackItems = [
     brand: ['am']
   },
   {
+    id: 'non-back-abc-d-k4-sr-bdn-kms-el-china',
+    ver: ['abc', 'd'],
+    brand: ['k4', 'bdn', 'sr', 'kms', 'el']
+  },
+  {
     id: 'non-back-abc-bdm-china',
     ver: ['abc'],
     brand: ['bdm']
@@ -108,7 +145,12 @@ const nonBackItems = [
     brand: ['yzy']
   },
   {
-    id: 'non-back-abc-sr-china',
+    id: 'non-back-abc-sr-china-1',
+    ver: ['abc'],
+    brand: ['sr']
+  },
+  {
+    id: 'non-back-abc-sr-china-2',
     ver: ['abc'],
     brand: ['sr']
   },
@@ -116,6 +158,11 @@ const nonBackItems = [
     id: 'non-back-abc-ny-china',
     ver: ['abc'],
     brand: ['ny']
+  },
+  {
+    id: 'non-back-abc-el-china',
+    ver: ['abc'],
+    brand: ['el']
   },
   {
     id: 'non-back-d-k4-china',
