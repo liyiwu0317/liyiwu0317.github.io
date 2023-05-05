@@ -10,7 +10,6 @@
   <div class="col">
     <select id="backPlatformSelection" class="form-select" onchange="onPlatformChanged(this, 'back', 'backBrandSelection');">
       <option selected>选择版本</option>
-      <option value="limit">限量版</option>
       <option value="abc">普版</option>
       <option value="d">D版</option>
     </select>
@@ -20,14 +19,19 @@
     <select id="backBrandSelection" class="form-select" onchange="onBrandChanged(this, 'back', 'backPlatformSelection');">
       <option selected>选择特典</option>
       <option value="am">AM</option>
-      <option value="sw">SW</option>
-      <option value="yes24">YES24</option>
-      <option value="mp">MP</option>
-      <option value="jyp">JYP</option>
-      <option value="mk">MK</option>
       <option value="bdm">BDM</option>
-      <option value="wm">WM</option>
+      <option value="jyp">JYP</option>
+      <option value="k4" disabled>K4</option>
+      <option value="kms" disabled>KMS</option>
+      <option value="mk" disabled>MK</option>
+      <option value="mp">MP</option>
       <option value="ms">MS</option>
+      <option value="sw">SW</option>
+      <option value="wm">WM</option>
+      <option value="yes24">YES24</option>
+      <option value="yzy" disabled>一直娱</option>
+      <option value="sr" disabled>星河</option>
+      <option value="ny" disabled>楠艺</option>
     </select>
   </div>
 </h3>
@@ -35,57 +39,7 @@
 <!-- content -->
 <div class="w3-row">
 
-  <div id="back-gem-abc-d-mp-sw-bdm" class="w3-col l3 s6">
-    <div class="w3-container c-card-fixed">
-      <div class="w3-display-container">
-        <img src="./images/back-abc_mp_sw_bdm-gem.jpg" style="width:100%">
-        <div class="w3-display-middle w3-display-hover">
-          <button class="w3-button w3-black" onClick="parent.open('https://shop1382036085.v.weidian.com/item.html?itemID=6272393077&wfr=c&ifr=itemdetail&source=goods_home&sfr=app&continueFlag=a08c76cf96394d97b7bad8c694654385')" >购买 <i class="fa fa-shopping-cart"></i></button>
-        </div>
-      </div>
-      <div class="w3-margin-top w3-margin-bottom">
-        <div class="c-title">MP限量版活动</div>
-        <span class="badge bg-primary-subtle border border-primary-subtle text-primary-emphasis rounded-pill">MP</span>
-        <span class="badge bg-primary-subtle border border-primary-subtle text-primary-emphasis rounded-pill">SW</span>
-        <span class="badge bg-primary-subtle border border-primary-subtle text-primary-emphasis rounded-pill">BDM</span>
-      </div>
-      <ul class="w3-small c-ul">
-        <li>MP特典限量版</li>
-        <li>SW特典普版</li>
-        <li>BDM特典D版</li>
-      </ul>
-      
-      <a href="https://weibo.com/6375947740/MEHBFs02i" target="_blank" class="w3-right c-a" >说明</a><br>
-      <div class="w3-margin-bottom c-price">RMB 228</div>
-    </div>
-  </div>
-
-  <div id="back-gem-abc-d-yes24-sw-bdm" class="w3-col l3 s6">
-    <div class="w3-container c-card-fixed">
-      <div class="w3-display-container">
-        <img src="./images/back-abc_yes24_sw_bdm-gem.jpg" style="width:100%">
-        <div class="w3-display-middle w3-display-hover">
-          <button class="w3-button w3-black" onClick="parent.open('https://shop1382036085.v.weidian.com/item.html?itemID=6272608725')" >购买 <i class="fa fa-shopping-cart"></i></button>
-        </div>
-      </div>
-      <div class="w3-margin-top w3-margin-bottom">
-        <div><b>YES24限量版活动</b></div>
-        <span class="badge bg-primary-subtle border border-primary-subtle text-primary-emphasis rounded-pill">YES24</span>
-        <span class="badge bg-primary-subtle border border-primary-subtle text-primary-emphasis rounded-pill">SW</span>
-        <span class="badge bg-primary-subtle border border-primary-subtle text-primary-emphasis rounded-pill">BDM</span>
-      </div>
-      <ul class="w3-small c-ul">
-        <li>YES24特典限量版</li>
-        <li>SW特典普版</li>
-        <li>BDM特典D版</li>
-      </ul>
-    
-      <a href="https://weibo.com/6375947740/MEIwVutvp" target="_blank" class="w3-right c-a" >说明</a><br>
-      <div class="w3-margin-bottom c-price">RMB 224</div>
-    </div>
-  </div>
-
-  <div id="back-gem-d-yes24-jyp-bdm" class="w3-col l3 s6">
+  <div id="back-d-yes24-jyp-bdm-gem" class="w3-col l3 s6">
     <div class="w3-container c-card-fixed">
       <div class="w3-display-container">
         <img src="./images/back-d_yes24_jyp_bdm-gem.jpg" style="width:100%">
@@ -100,7 +54,7 @@
         <span class="badge bg-primary-subtle border border-primary-subtle text-primary-emphasis rounded-pill">BDM</span>
       </div>
       <ul class="w3-small c-ul">
-        <li>YES24 / JYP 黄铉辰 1+1</li>
+        <li>YES24 黄铉辰 1+1</li>
         <li>JYP / BDM 金昇玟 1+1</li>
         <li>JYP / BDM 李旻浩 1+1</li>
       </ul>
@@ -110,7 +64,7 @@
     </div>
   </div>
 
-  <div id="back-feiChina-abc-wm" class="w3-col l3 s6">
+  <div id="back-abc-wm-china" class="w3-col l3 s6">
     <div class="w3-container c-card-fixed">
       <div class="w3-display-container">
         <img src="./images/back-abc_wm.jpg" style="width:100%">
@@ -130,7 +84,7 @@
     </div>
   </div>
 
-  <div id="back-feiChina-abc-ms" class="w3-col l3 s6">
+  <div id="back-abc-ms-china" class="w3-col l3 s6">
     <div class="w3-container c-card-fixed">
       <div class="w3-display-container">
         <img src="./images/back-abc_ms-gem.jpg" style="width:100%">
@@ -151,7 +105,7 @@
     </div>
   </div>
 
-  <div id="back-feiChina-abc-am" class="w3-col l3 s6">
+  <div id="back-abc-am-china" class="w3-col l3 s6">
     <div class="w3-container c-card-fixed">
       <div class="w3-display-container">
         <img src="./images/sr-back-abc_am.jpeg" style="width:100%">
@@ -173,8 +127,7 @@
     </div>
   </div>
 
-  <!-- 宝石 -->
-  <div id="back-gem-d-am" class="w3-col l3 s6">
+  <div id="back-d-am-gem" class="w3-col l3 s6">
     <div class="w3-container c-card-fixed">
       <div class="w3-display-container">
         <img src="./images/sr-back-d_am-gem.jpg" style="width:100%">
@@ -196,7 +149,7 @@
     </div>
   </div>
 
-  <div id="back-feiChina-abc-mp" class="w3-col l3 s6">
+  <div id="back-abc-mp-china" class="w3-col l3 s6">
     <div class="w3-container c-card-fixed">
       <div class="w3-display-container">
         <img src="./images/kram-back-abc_mp.jpg" style="width:100%">
@@ -218,7 +171,7 @@
     </div>
   </div>
 
-  <div id="back-gem-abc-mp" class="w3-col l3 s6">
+  <div id="back-abc-mp-gem" class="w3-col l3 s6">
     <div class="w3-container c-card-fixed">
       <div class="w3-display-container">
         <img src="./images/kram-back-abc_mp-gem.jpg" style="width:100%">
@@ -240,7 +193,7 @@
     </div>
   </div>
 
-  <div id="back-feiChina-abc-sw" class="w3-col l3 s6">
+  <div id="back-abc-sw-china" class="w3-col l3 s6">
     <div class="w3-container c-card-fixed c-card-fixed">
       <div class="w3-display-container">
         <img src="./images/kram-back-abc_sw.jpg" style="width:100%">
@@ -262,29 +215,7 @@
     </div>
   </div>
 
-  <div id="back-feiChina-abc-jyp" class="w3-col l3 s6">
-    <div class="w3-container c-card-fixed">
-      <div class="w3-display-container">
-        <img src="./images/wd-back-abc_jyp.jpg" style="width:100%">
-        <div class="w3-display-middle w3-display-hover">
-          <button class="w3-button w3-black" onClick="parent.open('https://weidian.com/item.html?itemID=6269300525&wfr=c')" >购买 <i class="fa fa-shopping-cart"></i></button>
-        </div>
-      </div>
-      <div class="w3-margin-top w3-margin-bottom">
-        <div><b>普版 1+1</b></div>
-        <span class="badge bg-primary-subtle border border-primary-subtle text-primary-emphasis rounded-pill">JYP</span>
-      </div>
-      <ul class="w3-small c-ul">
-        <li>黄铉辰 / 李旻浩 / 金昇玟 JYP特典卡</li>
-        <li>随机成员JYP特典卡</li>
-      </ul>
-      
-      <a href="https://weibo.com/6375947740/MEqoQvysY" target="_blank" class="w3-right c-a" >说明</a><br>
-      <div class="w3-margin-bottom c-price">RMB 120</div>
-    </div>
-  </div>
-
-  <div id="back-feiChina-abc-bdm" class="w3-col l3 s6">
+  <div id="back-abc-bdm-china" class="w3-col l3 s6">
     <div class="w3-container c-card-fixed">
       <div class="w3-display-container">
         <img src="./images/kram-back-abc_bdm.jpg" style="width:100%">
@@ -306,7 +237,7 @@
     </div>
   </div>
 
-  <div id="back-gem-abc-bdm" class="w3-col l3 s6">
+  <div id="back-abc-bdm-gem" class="w3-col l3 s6">
     <div class="w3-container c-card-fixed">
       <div class="w3-display-container">
         <img src="./images/kram-back-abc_bdm-gem.png" style="width:100%">
@@ -328,7 +259,7 @@
     </div>
   </div>
 
-  <div id="back-feiChina-abc-yes24" class="w3-col l3 s6">
+  <div id="back-abc-yes24-china" class="w3-col l3 s6">
     <div class="w3-container c-card-fixed">
       <div class="w3-display-container">
         <img src="./images/kram-back-abc_yes24.jpg" style="width:100%">
@@ -350,7 +281,7 @@
     </div>
   </div>
 
-  <div id="back-gem-d-bdm" class="w3-col l3 s6">
+  <div id="back-d-bdm-gem" class="w3-col l3 s6">
     <div class="w3-container c-card-fixed">
       <div class="w3-display-container">
         <img src="./images/yetimall-back-d_bdm-gem.jpg" style="width:100%">
@@ -373,7 +304,7 @@
     </div>
   </div>
 
-  <div id="back-gem-d-jyp" class="w3-col l3 s6">
+  <div id="back-d-jyp-gem" class="w3-col l3 s6">
     <div class="w3-container c-card-fixed">
       <div class="w3-display-container">
         <img src="./images/wd-back-d_jyp-gem.jpg" style="width:100%">
@@ -386,8 +317,6 @@
         <span class="badge bg-primary-subtle border border-primary-subtle text-primary-emphasis rounded-pill">JYP</span>
       </div>
       <ul class="w3-small c-ul">
-        <li>黄铉辰+金昇玟</li>
-        <li>黄铉辰+李旻浩</li>
         <li>金昇玟+李旻浩</li>
         <li>李旻浩+韩知城</li>
         <li>随机成员JYP特典卡 * 2</li>
@@ -398,7 +327,7 @@
     </div>
   </div>
 
-  <div id="back-gem-d-yes24" class="w3-col l3 s6">
+  <div id="back-d-yes24-gem" class="w3-col l3 s6">
     <div class="w3-container c-card-fixed">
       <div class="w3-display-container">
         <img src="./images/wd-back-d_yes24-gem.jpg" style="width:100%">
