@@ -1,0 +1,10 @@
+<div id="productTitleWd"></div>
+<div id="productContentWd" class="w3-row"></div>
+
+<script>
+  document.getElementById('productTitleWd').innerHTML = addTitle(wdTitle);
+
+  for (const item of wdItems) {
+    document.getElementById('productContentWd').innerHTML += addItem(item);
+  }
+</script>

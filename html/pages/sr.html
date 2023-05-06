@@ -1,0 +1,10 @@
+<div id="productTitleSR"></div>
+<div id="productContentSR" class="w3-row"></div>
+
+<script>
+  document.getElementById('productTitleSR').innerHTML = addTitle(srTitle);
+
+  for (const item of srItems) {
+    document.getElementById('productContentSR').innerHTML += addItem(item);
+  }
+</script>

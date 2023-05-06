@@ -1,0 +1,10 @@
+<div id="productTitleBear"></div>
+<div id="productContentBear" class="w3-row"></div>
+
+<script>
+  document.getElementById('productTitleBear').innerHTML = addTitle(bearTitle);
+
+  for (const item of bearItems) {
+    document.getElementById('productContentBear').innerHTML += addItem(item);
+  }
+</script>

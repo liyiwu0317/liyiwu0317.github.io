@@ -1,0 +1,10 @@
+<div id="productTitleOxbldkr"></div>
+<div id="productContentOxbldkr" class="w3-row"></div>
+
+<script>
+  document.getElementById('productTitleOxbldkr').innerHTML = addTitle(oxbldkrTitle);
+
+  for (const item of oxbldkrItems) {
+    document.getElementById('productContentOxbldkr').innerHTML += addItem(item);
+  }
+</script>

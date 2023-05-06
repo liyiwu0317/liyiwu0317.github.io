@@ -1,3 +1,8 @@
+function showPage(page) {
+  $('#productionList').load(`./html/pages/${page}.html`);
+  w3_close();
+}
+
 function showMainOption(sidebar) {
   $('#productionList').load(`./html/${sidebar}.html`);
   w3_close();
@@ -5,11 +10,6 @@ function showMainOption(sidebar) {
 
 function showAlbum() {
   $('#productionList').load('./html/album.html');
-  w3_close();
-}
-
-function showEvent(type) {
-  $('#productionList').load(`./html/event/${type}.html`);
   w3_close();
 }
 

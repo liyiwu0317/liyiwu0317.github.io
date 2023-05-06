@@ -1,78 +1,55 @@
 <div class="w3-padding-16 w3-row">
   <div class="w3-row alert alert-warning" role="alert">
-    <div class="w3-col l1 s1">5/5</div>
+    <div class="w3-col l1 s1">5/6</div>
 
     <div class="w3-col l11 s11">
-      <div class="w3-col" onClick="showEvent('shipped_back')">新1+1运回上架  <i class="fa-solid fa-arrow-right"></i></div>
-      <div class="w3-col" onClick="showEvent('non_shipped_back')">新1+1拆卡上架  <i class="fa-solid fa-arrow-right"></i></div>
+      <div class="w3-col" onClick="showMainOption('search')">指定李龙馥特典卡  <i class="fa-solid fa-arrow-right"></i></div>
     </div>
 
-  </div>
-
-  <div class="w3-display-container">
-    <img 
-      srcset="./images/skz/skz-1-480w.jpeg 480w, ./images/skz/skz-1.jpeg"
-      size="(max-width: 600px) 480px,
-            800px"
-      src="./images/skz/skz-1.jpeg"
-      style="width:100%"
-      onclick="showProduct('recommend')" 
-    >
-    <div class="w3-display-bottomleft w3-text-white w3-margin-bottom">
-      <a onclick="showProduct('recommend')" class="w3-button w3-black w3-padding-large w3-xlarge">推荐购买</a>
-    </div>
   </div>
 </div>
 
-<div class="w3-row">
-  <div class="w3-display-container">
-    <img 
-      srcset="./images/skz/skz-2-480w.jpg 480w, ./images/skz/skz-2.jpg"
-      size="(max-width: 600px) 480px,
-            800px"
-      src="./images/skz/skz-2.jpg"
-      style="width:100%"
-      onclick="showEvent('shipped_back')" 
-    >
-    <div class="w3-display-bottomleft w3-text-white w3-margin-bottom">
-      <a onclick="showEvent('shipped_back')" class="w3-button w3-black w3-padding-large w3-xlarge">1+1/2+2平台特典</a>
+<div class="w3-row-padding">
+
+  <div class="w3-col l3 s6">
+    <div class="w3-container w3-card w3-white w3-margin-bottom w3-center c-radius" onClick="showProduct('recommend')" >
+      <i class="fa-solid fa-cart-shopping w3-margin-top" style="font-size: 120px;"></i>
+      <div class="w3-margin-top w3-margin-bottom">
+        <div class="w3-center c-title">推荐购买</div>
+      </div>
     </div>
   </div>
+
+  <div class="w3-col l3 s6">
+    <div class="w3-container w3-card w3-white w3-margin-bottom w3-center c-radius" onClick="showMainOption('search')" >
+      <i class="fa-solid fa-magnifying-glass w3-margin-top" style="font-size: 120px;"></i>
+      <div class="w3-margin-top w3-margin-bottom">
+        <div class="w3-center c-title">全站搜索</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="w3-col l3 s6">
+    <div class="w3-container w3-card w3-white w3-center c-radius" onClick="showMainOption('goods')" >
+      <i class="fa-solid fa-gem w3-margin-top" style="font-size: 120px;"></i>
+      <div class="w3-margin-top w3-margin-bottom">
+        <div class="w3-center c-title">自制特典</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="w3-col l3 s6">
+    <div class="w3-container w3-card w3-white w3-center c-radius" onClick="showMainOption('question')" >
+      <i class="fa-solid fa-comment w3-margin-top" style="font-size: 120px;"></i>
+      <div class="w3-margin-top w3-margin-bottom">
+        <div class="w3-center c-title">常见问题</div>
+      </div>
+    </div>
+  </div>
+
 </div>
 
-<div class="w3-margin-top w3-large">最新最全的活动，请关注微博
+<div class="w3-margin-top w3-large w3-center">最新最全的活动，请关注微博
  <a href="https://weibo.com/u/6375947740" target="_blank" >菲首</a>
  <a href="https://weibo.com/u/5947554719" target="_blank" >宝石</a>
-</div>
-
-<div class="w3-padding-16 w3-row">
-  <div class="w3-display-container">
-    <img 
-      srcset="./images/skz/skz-3-480w.jpeg 480w, ./images/skz/skz-3.jpeg"
-      size="(max-width: 600px) 480px,
-            800px"
-      src="./images/skz/skz-3.jpeg"
-      style="width:100%"
-      onclick="showMainOption('goods')" 
-    >
-    <div class="w3-display-bottomleft w3-text-white w3-margin-bottom">
-      <a onclick="showMainOption('goods')" class="w3-button w3-black w3-padding-large w3-xlarge">自制特典</a>
-    </div>
-  </div>
-</div>
-
-<div class="w3-padding-16 w3-row">
-  <div class="w3-display-container">
-    <img 
-      srcset="./images/skz/skz-4-480w.png 480w, ./images/skz/skz-4.png"
-      size="(max-width: 600px) 480px,
-            800px"
-      src="./images/skz/skz-4.png"
-      style="width:100%"
-      onclick="showMainOption('question')" 
-    >
-    <div class="w3-display-bottomleft w3-text-white w3-margin-bottom">
-      <a onclick="showMainOption('question')" class="w3-button w3-black w3-padding-large w3-xlarge">常见问题</a>
-    </div>
-  </div>
 </div>

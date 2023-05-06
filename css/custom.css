@@ -7,6 +7,10 @@ img {
   border-radius: 10px;
 }
 
+.c-radius {
+  border-radius: 10px;
+}
+
 .c-ul {
   display: block;
   list-style-type: disc;

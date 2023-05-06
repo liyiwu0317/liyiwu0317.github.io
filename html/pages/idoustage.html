@@ -1,0 +1,10 @@
+<div id="productTitleIdoustage"></div>
+<div id="productContentIdoustage" class="w3-row"></div>
+
+<script>
+  document.getElementById('productTitleIdoustage').innerHTML = addTitle(idoustageTitle);
+
+  for (const item of idoustageItems) {
+    document.getElementById('productContentIdoustage').innerHTML += addItem(item);
+  }
+</script>

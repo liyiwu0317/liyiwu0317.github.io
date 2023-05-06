@@ -1,0 +1,10 @@
+<div id="productTitleYetimall"></div>
+<div id="productContentYetimall" class="w3-row"></div>
+
+<script>
+   document.getElementById('productTitleYetimall').innerHTML = addTitle(yetimallTitle);
+
+  for (const item of yetimallItems) {
+    document.getElementById('productContentYetimall').innerHTML += addItem(item);
+  }
+</script>

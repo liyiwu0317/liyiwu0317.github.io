@@ -1,0 +1,10 @@
+<div id="productTitleK4"></div>
+<div id="productContentK4" class="w3-row"></div>
+
+<script>
+  document.getElementById('productTitleK4').innerHTML = addTitle(k4Title);
+
+  for (const item of k4Items) {
+    document.getElementById('productContentK4').innerHTML += addItem(item);
+  }
+</script>

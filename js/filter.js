@@ -17,186 +17,55 @@ const Options = {
     "yzy", 
     "sr", 
     "ny"
-  ]
+  ],
+  "shipping": ["back", "non-back"]
+}
+const brandMap = {
+  "am": "AM", 
+  "bdm": "BDM", 
+  "bdn": "BDN",
+  "el": "EL", 
+  "jyp": "JYP",
+  "k4": "K4", 
+  "kms": "KMS", 
+  "mk": "MK", 
+  "mp": "MP", 
+  "ms": "MS", 
+  "sw": "SW", 
+  "wm": "WM", 
+  "yes24": "YES24", 
+  "yzy": "一直娱", 
+  "sr": "星河", 
+  "ny": "楠艺"
 }
 
-const backItems = [
-  {
-    id: 'back-abc-am-china',
-    ver: ['abc'],
-    brand: ['am']
-  },
-  {
-    id: 'back-abc-mp-china',
-    ver: ['abc'],
-    brand: ['mp']
-  },
-  {
-    id: 'back-abc-sw-china',
-    ver: ['abc'],
-    brand: ['sw']
-  },
-  {
-    id: 'back-abc-yes24-china',
-    ver: ['abc'],
-    brand: ['yes24']
-  },
-  {
-    id: 'back-abc-bdm-china',
-    ver: ['abc'],
-    brand: ['bdm']
-  },
-  {
-    id: 'back-abc-wm-china',
-    ver: ['abc'],
-    brand: ['wm']
-  },
-  {
-    id: 'back-abc-ms-china',
-    ver: ['abc'],
-    brand: ['ms']
-  },
-  {
-    id: 'back-abc-sr-china',
-    ver: ['abc'],
-    brand: ['sr']
-  },
-  {
-    id: 'back-abc-el-china',
-    ver: ['abc'],
-    brand: ['el']
-  },
-  {
-    id: 'back-abc-kms-china',
-    ver: ['abc'],
-    brand: ['kms']
-  },
-  {
-    id: 'back-abc-mp-gem',
-    ver: ['abc'],
-    brand: ['mp']
-  },
-  {
-    id: 'back-abc-bdm-gem',
-    ver: ['abc'],
-    brand: ['bdm']
-  },
-  {
-    id: 'back-d-am-gem',
-    ver: ['d'],
-    brand: ['am']
-  },
-  {
-    id: 'back-d-bdm-gem',
-    ver: ['d'],
-    brand: ['bdm']
-  },
-  {
-    id: 'back-d-jyp-gem',
-    ver: ['d'],
-    brand: ['jyp']
-  },
-  {
-    id: 'back-d-yes24-gem',
-    ver: ['d'],
-    brand: ['yes24']
-  },
-  {
-    id: 'back-d-yes24-jyp-bdm-gem',
-    ver: ['d'],
-    brand: ['yes24']
-  }
-]
+let totalItems = [
+  ...k4Items,
+  ...srItems,
+  ...bearItems,
+  ...nanyiItems,
+  ...yetimallItems,
+  ...idoustageItems,
+  ...oxbldkrItems,
+  ...yzyItems,
+  ...wdItems,
+  ...backItems,
+  ...nonBackItems,
+];
 
-const nonBackItems = [
-  {
-    id: 'non-back-abc-k4-china',
-    ver: ['abc'],
-    brand: ['k4']
-  },
-  {
-    id: 'non-back-abc-am-china',
-    ver: ['abc'],
-    brand: ['am']
-  },
-  {
-    id: 'non-back-abc-d-k4-sr-bdn-kms-el-china',
-    ver: ['abc', 'd'],
-    brand: ['k4', 'bdn', 'sr', 'kms', 'el']
-  },
-  {
-    id: 'non-back-abc-bdm-china',
-    ver: ['abc'],
-    brand: ['bdm']
-  },
-  {
-    id: 'non-back-abc-kms-china-1',
-    ver: ['abc'],
-    brand: ['kms']
-  },
-  {
-    id: 'non-back-abc-kms-china-2',
-    ver: ['abc'],
-    brand: ['kms']
-  },
-  {
-    id: 'non-back-abc-yzy-china',
-    ver: ['abc'],
-    brand: ['yzy']
-  },
-  {
-    id: 'non-back-abc-sr-china-1',
-    ver: ['abc'],
-    brand: ['sr']
-  },
-  {
-    id: 'non-back-abc-sr-china-2',
-    ver: ['abc'],
-    brand: ['sr']
-  },
-  {
-    id: 'non-back-abc-ny-china',
-    ver: ['abc'],
-    brand: ['ny']
-  },
-  {
-    id: 'non-back-abc-el-china',
-    ver: ['abc'],
-    brand: ['el']
-  },
-  {
-    id: 'non-back-d-k4-china',
-    ver: ['d'],
-    brand: ['k4']
-  },
-  {
-    id: 'non-back-abc-yes24-gem',
-    ver: ['abc'],
-    brand: ['yes24']
-  },
-  {
-    id: 'non-back-abc-sw-gem',
-    ver: ['abc'],
-    brand: ['sw']
-  },
-  {
-    id: 'non-back-abc-mp-gem',
-    ver: ['abc'],
-    brand: ['mp']
-  },
-  {
-    id: 'non-back-abc-k4-gem',
-    ver: ['abc'],
-    brand: ['k4']
-  },
-  {
-    id: 'non-back-abc-yzy-gem',
-    ver: ['abc'],
-    brand: ['yzy']
-  }
-]
+function getUniqueItems (items) {
+  let uniqueIDs = [];
+  let uniqueItems = [];
+  items.forEach(x => {
+    if (!uniqueIDs.includes(x.id)) {
+      uniqueIDs.push(x.id);
+      uniqueItems.push(x);
+    }
+  })
+  return uniqueItems;
+}
 
-function findMatchItems(items, ver, brand) {
+function findMatchItems(items, ver, brand, shipping, onlyFelix) {
   let showItems = [];
   let hideItems = [];
 
@@ -206,9 +75,17 @@ function findMatchItems(items, ver, brand) {
   if (!brand || !Options.brand.includes(brand)) {
     brand = null;
   }
+  if (!shipping || !Options.shipping.includes(shipping)) {
+    shipping = null;
+  }
 
   items.forEach(x => {
-    if((!ver || x.ver.includes(ver)) && (!brand || x.brand.includes(brand))) {
+    if(
+      (!ver || x.ver.includes(ver)) &&
+      (!brand || x.brand.includes(brandMap[brand])) &&
+      (!shipping || x.shipping === shipping) &&
+      (!onlyFelix || x.onlyFelix)
+    ) {
       showItems.push(x.id);
     } else {
       hideItems.push(x.id);
@@ -222,7 +99,7 @@ function findMatchItems(items, ver, brand) {
 }
 
 function changeToShow(id) {
-  var x = document.getElementById(id);
+  let x = document.getElementById(id);
 
   if (x && x.className.indexOf("w3-show") == -1) {
     x.className += " w3-show";
@@ -239,15 +116,38 @@ function changeToHide(id) {
   }
 }
 
+function onShippingChanged(option, page) {
+  let brand = $(`#brandSelection`).val();
+  let ver = $(`#platformSelection`).val();
+  let shipping = option.value;
+  let onlyFelix = document.getElementById("onlyFelixCheckbox");
+  let items = [];
+
+  if (page === 'search') items = totalItems;
+
+  const objs = findMatchItems(items, ver, brand, shipping, onlyFelix ? onlyFelix.checked : null);
+
+  for (const id of objs.showItems) {
+    changeToShow(id);
+  }
+
+  for (const id of objs.hideItems) {
+    changeToHide(id);
+  }
+}
+
 function onPlatformChanged(option, page, otherSelection) {
   let brand = $(`#${otherSelection}`).val();
   let ver = option.value;
+  let shipping = $(`#shippingSelection`).val();
+  let onlyFelix = document.getElementById("onlyFelixCheckbox");
   let items = [];
 
   if (page === 'back') items = backItems;
   else if (page === 'non-back') items = nonBackItems;
+  else if (page === 'search') items = totalItems;
 
-  const objs = findMatchItems(items, ver, brand);
+  const objs = findMatchItems(items, ver, brand, shipping, onlyFelix ? onlyFelix.checked : null);
 
   for (const id of objs.showItems) {
     changeToShow(id);
@@ -261,12 +161,15 @@ function onPlatformChanged(option, page, otherSelection) {
 function onBrandChanged(option, page, otherSelection) {
   let brand = option.value;
   let ver = $(`#${otherSelection}`).val();
+  let shipping = $(`#shippingSelection`).val();
+  let onlyFelix = document.getElementById("onlyFelixCheckbox");
   let items = [];
 
   if (page === 'back') items = backItems;
   else if (page === 'non-back') items = nonBackItems;
+  else if (page === 'search') items = totalItems;
 
-  const objs = findMatchItems(items, ver, brand);
+  const objs = findMatchItems(items, ver, brand, shipping, onlyFelix ? onlyFelix.checked : null);
 
   for (const id of objs.showItems) {
     changeToShow(id);
@@ -275,4 +178,73 @@ function onBrandChanged(option, page, otherSelection) {
   for (const id of objs.hideItems) {
     changeToHide(id);
   }
+}
+
+function onCheckboxChanged(checkboxElem) {
+  let brand = $(`#brandSelection`).val();
+  let ver = $(`#platformSelection`).val();
+  let shipping = $(`#shippingSelection`).val();
+  let onlyFelix = checkboxElem;
+  let items = [];
+
+  items = totalItems;
+
+  const objs = findMatchItems(items, ver, brand, shipping, onlyFelix.checked);
+
+  for (const id of objs.showItems) {
+    changeToShow(id);
+  }
+
+  for (const id of objs.hideItems) {
+    changeToHide(id);
+  }
+}
+
+function addTitle(title) {
+  return `<h3 class="w3-container w3-padding-16"><b>${title}</b></h3>`;
+}
+
+function addItem(item) {
+  let aa = 
+    '<div class="w3-col l3 s6">' + `<div id="${item.id}" class="w3-container c-card-fixed">` + '<div class="w3-display-container">' +
+    `<img src="${item.image}" style="width:100%">` + '<div class="w3-display-middle w3-display-hover">';
+
+  if (item.modalID) {
+    aa += `<button class="w3-button w3-black" onClick="document.getElementById('${item.modalID}').style.display='block'" >购买 <i class="fa fa-shopping-cart"></i></button>`;
+  } else {
+    aa += `<button class="w3-button w3-black" onClick="parent.open('${item.buyLink}')">购买 <i class="fa fa-shopping-cart"></i>'</button>`;
+  }
+  aa += '</div>' + '</div>' + '<div class="w3-margin-top w3-margin-bottom">' + `<div class="c-title">${item.title}</div>`;
+  for (const brand of item.brand) {
+    aa += `<span class="badge bg-primary-subtle border border-primary-subtle text-primary-emphasis rounded-pill">${brand}</span>`;
+  }
+  if (item.hit.length > 0) {
+    aa += '</div>';
+    aa += '<ul class="w3-small c-ul">';
+    for (const hit of item.hit) {
+      aa += `<li>${hit}</li>`;
+    }
+    aa += ' </ul>';
+    if (item.descLink.length > 0) {
+      aa += `<a href="${item.descLink}" target="_blank" class="w3-right c-a" >说明</a><br>` + `<div class="w3-margin-bottom c-price">${item.price}</div>` + '</div>' + '</div>';
+    } else {
+      aa += `<div class="c-price">${item.price}</div>`;
+      aa += '</div>' + '</div>';
+    }
+  } else {
+    if (item.descLink.length > 0) {
+      aa += '</div>';
+      aa += `<a href="${item.descLink}" target="_blank" class="w3-right c-a" >说明</a><br>` + `<div class="w3-margin-bottom c-price">${item.price}</div>` + '</div>' + '</div>';
+    } else {
+      if (item.brand.length > 0) {
+        aa += '</div>';
+        aa += `<div class="w3-margin-bottom c-price">${item.price}</div>`
+      } else {
+        aa += `<div class="c-price">${item.price}</div>`;
+        aa += '</div>' + '</div>';
+      }
+    }
+  }
+
+  return aa;
 }

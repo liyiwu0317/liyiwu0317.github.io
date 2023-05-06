@@ -1,0 +1,10 @@
+<div id="productTitleNanyi"></div>
+<div id="productContentNanyi" class="w3-row"></div>
+
+<script>
+  document.getElementById('productTitleNanyi').innerHTML = addTitle(nanyiTitle);
+
+  for (const item of nanyiItems) {
+    document.getElementById('productContentNanyi').innerHTML += addItem(item);
+  }
+</script>
