@@ -7,6 +7,14 @@ img {
   border-radius: 10px;
 }
 
+.c-body {
+  background-color: #f2f2f3
+}
+
+.c-card {
+  background-color: rgb(253 225 221)!important;
+}
+
 .c-radius {
   border-radius: 10px;
 }
