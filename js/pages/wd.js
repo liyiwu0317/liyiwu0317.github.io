@@ -24,7 +24,7 @@ const wdItems = [
     descLink: '',
     price: '¥ 85.5',
     shipping: 'back',
-    onlyFelix: false,
+    onlyFelix: true,
   },
   {
     id: 'kram-back-abc-kms-china',
@@ -37,7 +37,7 @@ const wdItems = [
     descLink: 'https://weibo.com/6375947740/MF0my4fKS',
     price: '¥ 80+',
     shipping: 'back',
-    onlyFelix: false,
+    onlyFelix: true,
   },
   {
     id: 'kram-back-abc-kms-gem',
@@ -50,6 +50,6 @@ const wdItems = [
     descLink: 'https://weibo.com/5947554719/MF0PkhfvQ',
     price: '¥ 80+',
     shipping: 'back',
-    onlyFelix: false,
+    onlyFelix: true,
   }
 ]
