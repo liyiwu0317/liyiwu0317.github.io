@@ -1,5 +1,18 @@
 const backItems = [
   {
+    id: 'kram-back-limit-d-mp-sw',
+    ver: ['limit', 'd'],
+    image: './images/kram-back-limit-d-mp-sw.jpg',
+    buyLink: 'https://shop1382036085.v.weidian.com/item.html?itemID=6288438791',
+    title: '限量版+D版',
+    brand: ['MP', 'SW'],
+    hit: ['8张凑套'],
+    descLink: 'https://weibo.com/5947554719/MFCgMjGaP',
+    price: '¥ 145',
+    shipping: 'back',
+    onlyFelix: false,
+  },
+  {
     id: 'wd-back-abc-el-china',
     ver: ['abc'],
     image: './images/kram-back-abc_el.jpg',
