@@ -1,5 +1,18 @@
 const backItems = [
   {
+    id: 'kram-back-d-yes24',
+    ver: ['d'],
+    image: './images/kram-back-d-yes24.jpg',
+    buyLink: 'https://shop1382036085.v.weidian.com/item.html?itemID=6317825912',
+    title: 'D版 1+1',
+    brand: ['YES24'],
+    hit: ['李龙馥YES24特典卡+封面', '随机成员YES24特典卡+封面'],
+    descLink: 'https://weibo.com/6375947740/N185Yg7yK',
+    price: '¥ 120',
+    shipping: 'back',
+    onlyFelix: true,
+  },
+  {
     id: 'kram-back-limit-d-mp-sw',
     ver: ['limit', 'd'],
     image: './images/kram-back-limit-d-mp-sw.jpg',
@@ -164,7 +177,7 @@ const backItems = [
     buyLink: 'https://weidian.com/item.html?itemID=6294837433&wfr=c',
     title: '普版',
     brand: ['MMT'],
-    hit: ['李旻浩 / 金昇玟 / 方灿 / I.N / CHANGBIN / HAN MMT特典卡'],
+    hit: ['李旻浩 / 金昇玟 / I.N / CHANGBIN MMT特典卡'],
     descLink: 'https://weibo.com/6375947740/MFWEvrZ72',
     price: '¥ 80~159',
     shipping: 'back',

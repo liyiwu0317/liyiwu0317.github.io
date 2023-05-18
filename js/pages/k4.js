@@ -3,7 +3,7 @@ const k4Items = [
   {
     id: 'k4-back-limited-k4-china',
     ver: ['limit'],
-    image: './images/k4-limited.png',
+    image: './images/k4-limited.jpg',
     buyLink: 'https://cn.ktown4u.com/iteminfo?grp_no=1741898&fanc_goods_no=207496&goods_no=94038',
     title: '限量版',
     brand: [],
