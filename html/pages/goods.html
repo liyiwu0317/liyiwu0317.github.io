@@ -1,0 +1,45 @@
+<div id="productTitleGoods"></div>
+
+<div class="w3-row w3-margin-top w3-medium">
+  <ol>
+    <li>需补国内邮费，售后群通知</li>
+    <li>专辑和自制特典分开发送</li>
+  </ol>
+
+  <div class="w3-margin-bottom">下单后请加</div>
+  <ul>
+    <li>菲首售后6群🐧 606864685</li>
+    <li>宝石售后8群🐧 822281947</li>
+  </ul>
+</div>
+
+<div id="productContentGoods" class="row row-cols-2 row-cols-md-4 g-3"></div>
+
+<!-- Modal -->
+<div id="goodsDeposit" class="w3-modal">
+  <div class="w3-modal-content w3-animate-zoom" style="padding:16px">
+    <div class="w3-container w3-white w3-center">
+      <i onclick="document.getElementById('goodsDeposit').style.display='none'" class="fa fa-remove w3-right w3-button w3-transparent w3-xxlarge"></i>
+      <h2 class="w3-wide">补款教程</h2>
+      <img src="./images/goods/goods-deposit-tutorial.jpg" class="w3-left w3-margin-right" style="width: 100%">
+    </div>
+  </div>
+</div>
+
+<div id="goodsAlbum" class="w3-modal">
+  <div class="w3-modal-content w3-animate-zoom" style="padding:16px">
+    <div class="w3-container w3-white w3-center">
+      <i onclick="document.getElementById('goodsAlbum').style.display='none'" class="fa fa-remove w3-right w3-button w3-transparent w3-xxlarge"></i>
+      <h2 class="w3-wide">补款教程</h2>
+      <img src="./images/goods/goods-album-tutorial.jpg" class="w3-left w3-margin-right" style="width: 100%">
+    </div>
+  </div>
+</div>
+
+<script>
+  document.getElementById('productTitleGoods').innerHTML = addTitle(goodsTitle);
+
+  for (const item of goodsItems) {
+    document.getElementById('productContentGoods').innerHTML += addItem(item);
+  }
+</script>
