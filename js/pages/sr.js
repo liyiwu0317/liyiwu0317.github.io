@@ -78,4 +78,17 @@ const srItems = [
     shipping: 'back',
     onlyFelix: false,
   },
+  {
+    id: 'sr-back-d-am-cover-china',
+    ver: ['d'],
+    image: './images/sr-back-d-am-cover-china.jpg',
+    buyLink: 'http://m.liveonepick.com/#/?productId=69a86bc6bde140cab2974f00eb7d5157&continueFlag=713ef5f04016ab5f5772f45827d51233',
+    title: 'D版 套装 (8本)',
+    brand: ['AM'],
+    hit: [],
+    descLink: '',
+    price: '¥ 352',
+    shipping: 'back',
+    onlyFelix: false,
+  },
 ]

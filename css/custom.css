@@ -2,13 +2,18 @@ h1,h2,h3,h4,h5,h6{
   line-height: 1.5;
 }
 
-img {
+/* img {
   border: 1px solid #dfdfdf;
   border-radius: 10px;
+} */
+
+.card-footer {
+  background-color: white;
+  border-top: none;
 }
 
 .c-body {
-  background-color: #f2f2f3
+  background-color: #f2f2f3;
 }
 
 .c-card {
@@ -40,24 +45,4 @@ img {
 .c-price {
   font-weight: 600;
   color: #c62828;
-}
-
-@media only screen and (min-width: 601px) {
-  .c-card-fixed {
-    height: 420px;
-  }
-
-  .c-card-list-fixed {
-    height: 90px;
-  }
-}
-
-@media only screen and (max-width: 600px) {
-  .c-card-fixed {
-    height: 380px;
-  }
-
-  .c-card-list-fixed {
-    height: 90px;
-  }
 }

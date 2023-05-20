@@ -207,19 +207,32 @@ function addTitle(title) {
 }
 
 function addItem(item) {
-  let aa = 
-    '<div class="w3-col l3 s6">' + `<div id="${item.id}" class="w3-container c-card-fixed">` + '<div class="w3-display-container">' +
-    `<img src="${item.image}" style="width:100%">` + '<div class="w3-display-middle w3-display-hover">';
+  let aa = `<div id="${item.id}" class="col">` + `<div class="card h-100">`;
 
+  // image
+  aa += `<div class="w3-display-container">` + `<img src="${item.image}" class="card-img-top">` + '<div class="w3-display-middle w3-display-hover">';
   if (item.modalID) {
     aa += `<button class="w3-button w3-black" onClick="document.getElementById('${item.modalID}').style.display='block'" >购买 <i class="fa fa-shopping-cart"></i></button>`;
   } else {
     aa += `<button class="w3-button w3-black" onClick="parent.open('${item.buyLink}')">购买 <i class="fa fa-shopping-cart"></i>'</button>`;
   }
-  aa += '</div>' + '</div>' + '<div class="w3-margin-top w3-margin-bottom">' + `<div class="c-title">${item.title}</div>`;
+  aa += '</div>' + '</div>';
+
+  // body
+  aa += `<div class="card-body">`;
+  if (item.brand.length > 0) {
+    aa += '<div class="w3-margin-bottom">';
+  } else {
+    aa += '<div>'
+  }
+
+  // title, brand
+  aa += `<div class="c-title">${item.title}</div>`;
   for (const brand of item.brand) {
     aa += `<span class="badge bg-primary-subtle border border-primary-subtle text-primary-emphasis rounded-pill">${brand}</span>`;
   }
+
+  // hit
   if (item.hit.length > 0) {
     aa += '</div>';
     aa += '<ul class="w3-small c-ul">';
@@ -227,26 +240,18 @@ function addItem(item) {
       aa += `<li>${hit}</li>`;
     }
     aa += ' </ul>';
-    if (item.descLink.length > 0) {
-      aa += `<a href="${item.descLink}" target="_blank" class="w3-right c-a" >说明</a><br>` + `<div class="w3-margin-bottom c-price">${item.price}</div>` + '</div>' + '</div>';
-    } else {
-      aa += `<div class="c-price">${item.price}</div>`;
-      aa += '</div>' + '</div>';
-    }
   } else {
-    if (item.descLink.length > 0) {
-      aa += '</div>';
-      aa += `<a href="${item.descLink}" target="_blank" class="w3-right c-a" >说明</a><br>` + `<div class="w3-margin-bottom c-price">${item.price}</div>` + '</div>' + '</div>';
-    } else {
-      if (item.brand.length > 0) {
-        aa += '</div>';
-        aa += `<div class="w3-margin-bottom c-price">${item.price}</div>`
-      } else {
-        aa += `<div class="c-price">${item.price}</div>`;
-        aa += '</div>' + '</div>';
-      }
-    }
+    aa += '</div>';
   }
+
+  // descLink, price
+  aa += '</div><div class="card-footer">';
+  if (item.descLink.length > 0) {
+    aa += `<span class="c-price">${item.price}</span>` + `<a href="${item.descLink}" target="_blank" class="w3-right c-a" >说明</a>`;
+  } else {
+    aa += `<span class="c-price">${item.price}</span>`;
+  }
+  aa += '</div></div></div>';
 
   return aa;
 }
