@@ -11,6 +11,7 @@ const backItems = [
     price: '¥ 120',
     shipping: 'back',
     onlyFelix: true,
+    ribbon: '封面',
   },
   {
     id: 'sr-back-d-am',
@@ -24,6 +25,7 @@ const backItems = [
     price: '¥ 88',
     shipping: 'back',
     onlyFelix: true,
+    ribbon: '封面',
   },
   {
     id: 'sr-back-d-am-gem',
@@ -37,6 +39,7 @@ const backItems = [
     price: '¥ 88',
     shipping: 'back',
     onlyFelix: true,
+    ribbon: '封面',
   },
   {
     id: 'wd-back-abc-ny-china',

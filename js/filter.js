@@ -210,7 +210,11 @@ function addItem(item) {
   let aa = `<div id="${item.id}" class="col">` + `<div class="card h-100">`;
 
   // image
-  aa += `<div class="w3-display-container">` + `<img src="${item.image}" class="card-img-top">` + '<div class="w3-display-middle w3-display-hover">';
+  aa += `<div class="w3-display-container">`;
+  if (item.ribbon) {
+    aa += `<div class="ribbon ribbon-top-right"><span>${item.ribbon}</span></div>`;
+  }
+  aa += `<img src="${item.image}" class="card-img-top">` + '<div class="w3-display-middle w3-display-hover">';
   if (item.modalID) {
     aa += `<button class="w3-button w3-black" onClick="document.getElementById('${item.modalID}').style.display='block'" >购买 <i class="fa fa-shopping-cart"></i></button>`;
   } else {

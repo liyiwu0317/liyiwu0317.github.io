@@ -12,5 +12,6 @@ const k4Items = [
     price: '',
     shipping: '',
     onlyFelix: false,
+    ribbon: '',
   },
 ]
