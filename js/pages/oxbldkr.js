@@ -58,7 +58,7 @@ const oxbldkrItems = [
     image: './images/oxbldkr-back-abc_ms_wm_el.png',
     buyLink: 'https://www.oxbldkr.com/index.php/wap/goods/detail?goods_id=1363&continueFlag=bd4fddecd5a8db3ad9503af53320e97c',
     title: '普版',
-    brand: ['MS', 'WM', 'EL'],
+    brand: ['MS', 'EL'],
     hit: ['8本一套有特典'],
     descLink: '',
     price: '¥ 658+',
