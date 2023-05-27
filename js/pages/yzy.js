@@ -26,4 +26,17 @@ const yzyItems = [
     shipping: 'back',
     onlyFelix: false,
   },
+  {
+    id: 'yzy-back-abc-yzy-v2-china',
+    ver: ['abc'],
+    image: './images/yzy-abc-v2.jpg',
+    buyLink: 'https://www.withfans.com/web/#/shopDetail/D6BA72EB2CCDBA19/0',
+    title: '普版',
+    brand: ['一直娱 2.0'],
+    hit: [],
+    descLink: '',
+    price: '¥ 95',
+    shipping: 'back',
+    onlyFelix: false,
+  },
 ]

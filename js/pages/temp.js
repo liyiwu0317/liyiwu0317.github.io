@@ -9,7 +9,7 @@ const k4Items = [
     brand: [],
     hit: [],
     descLink: '',
-    price: '',
+    price: '¥ ',
     shipping: '',
     onlyFelix: false,
     ribbon: '',

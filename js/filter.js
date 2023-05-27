@@ -16,6 +16,7 @@ const Options = {
     "wm",
     "yes24",
     "yzy",
+    "yzy-v2",
     "sr",
     "ny"
   ],
@@ -37,6 +38,7 @@ const brandMap = {
   "wm": "WM",
   "yes24": "YES24",
   "yzy": "一直娱",
+  "yzy-v2": "一直娱 2.0",
   "sr": "星河",
   "ny": "楠艺"
 }
