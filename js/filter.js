@@ -21,7 +21,8 @@ const Options = {
     "sr",
     "ny"
   ],
-  "shipping": ["back", "non-back"]
+  "shipping": ["back", "non-back"],
+  "fansite": ["china", "gem"],
 }
 const brandMap = {
   "am": "AM",
@@ -74,7 +75,7 @@ function getUniqueItems (items) {
   return uniqueItems;
 }
 
-function findMatchItems(items, ver, brand, shipping, onlyFelix) {
+function findMatchItems(items, ver, brand, shipping, onlyFelix, fansite) {
   let showItems = [];
   let hideItems = [];
 
@@ -87,13 +88,17 @@ function findMatchItems(items, ver, brand, shipping, onlyFelix) {
   if (!shipping || !Options.shipping.includes(shipping)) {
     shipping = null;
   }
+  if (!fansite || !Options.fansite.includes(fansite)) {
+    fansite = null;
+  }
 
   items.forEach(x => {
     if(
       (!ver || x.ver.includes(ver)) &&
       (!brand || x.brand.includes(brandMap[brand])) &&
       (!shipping || x.shipping === shipping) &&
-      (!onlyFelix || x.onlyFelix)
+      (!onlyFelix || x.onlyFelix) &&
+      (!fansite || x.fansite.includes(fansite))
     ) {
       showItems.push(x.id);
     } else {
@@ -125,16 +130,38 @@ function changeToHide(id) {
   }
 }
 
+function onFansiteChanged(option, page) {
+  let brand = $(`#brandSelection`).val();
+  let ver = $(`#platformSelection`).val();
+  let fansite = option.value;
+  let shipping = $(`#shippingSelection`).val();
+  let onlyFelix = document.getElementById("onlyFelixCheckbox");
+  let items = [];
+
+  if (page === 'search') items = totalItems;
+
+  const objs = findMatchItems(items, ver, brand, shipping, onlyFelix ? onlyFelix.checked : null, fansite);
+
+  for (const id of objs.showItems) {
+    changeToShow(id);
+  }
+
+  for (const id of objs.hideItems) {
+    changeToHide(id);
+  }
+}
+
 function onShippingChanged(option, page) {
   let brand = $(`#brandSelection`).val();
   let ver = $(`#platformSelection`).val();
+  let fansite = $(`#fansiteSelection`).val();
   let shipping = option.value;
   let onlyFelix = document.getElementById("onlyFelixCheckbox");
   let items = [];
 
   if (page === 'search') items = totalItems;
 
-  const objs = findMatchItems(items, ver, brand, shipping, onlyFelix ? onlyFelix.checked : null);
+  const objs = findMatchItems(items, ver, brand, shipping, onlyFelix ? onlyFelix.checked : null, fansite);
 
   for (const id of objs.showItems) {
     changeToShow(id);
@@ -148,6 +175,7 @@ function onShippingChanged(option, page) {
 function onPlatformChanged(option, page, otherSelection) {
   let brand = $(`#${otherSelection}`).val();
   let ver = option.value;
+  let fansite = $(`#fansiteSelection`).val();
   let shipping = $(`#shippingSelection`).val();
   let onlyFelix = document.getElementById("onlyFelixCheckbox");
   let items = [];
@@ -156,7 +184,7 @@ function onPlatformChanged(option, page, otherSelection) {
   else if (page === 'non-back') items = nonBackItems;
   else if (page === 'search') items = totalItems;
 
-  const objs = findMatchItems(items, ver, brand, shipping, onlyFelix ? onlyFelix.checked : null);
+  const objs = findMatchItems(items, ver, brand, shipping, onlyFelix ? onlyFelix.checked : null, fansite);
 
   for (const id of objs.showItems) {
     changeToShow(id);
@@ -170,6 +198,7 @@ function onPlatformChanged(option, page, otherSelection) {
 function onBrandChanged(option, page, otherSelection) {
   let brand = option.value;
   let ver = $(`#${otherSelection}`).val();
+  let fansite = $(`#fansiteSelection`).val();
   let shipping = $(`#shippingSelection`).val();
   let onlyFelix = document.getElementById("onlyFelixCheckbox");
   let items = [];
@@ -178,7 +207,7 @@ function onBrandChanged(option, page, otherSelection) {
   else if (page === 'non-back') items = nonBackItems;
   else if (page === 'search') items = totalItems;
 
-  const objs = findMatchItems(items, ver, brand, shipping, onlyFelix ? onlyFelix.checked : null);
+  const objs = findMatchItems(items, ver, brand, shipping, onlyFelix ? onlyFelix.checked : null, fansite);
 
   for (const id of objs.showItems) {
     changeToShow(id);
@@ -192,13 +221,14 @@ function onBrandChanged(option, page, otherSelection) {
 function onCheckboxChanged(checkboxElem) {
   let brand = $(`#brandSelection`).val();
   let ver = $(`#platformSelection`).val();
+  let fansite = $(`#fansiteSelection`).val();
   let shipping = $(`#shippingSelection`).val();
   let onlyFelix = checkboxElem;
   let items = [];
 
   items = totalItems;
 
-  const objs = findMatchItems(items, ver, brand, shipping, onlyFelix.checked);
+  const objs = findMatchItems(items, ver, brand, shipping, onlyFelix.checked, fansite);
 
   for (const id of objs.showItems) {
     changeToShow(id);

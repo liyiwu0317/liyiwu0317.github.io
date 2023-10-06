@@ -13,5 +13,6 @@ const k4Items = [
     shipping: 'back',
     onlyFelix: false,
     ribbon: '',
+    fansite: '',
   },
 ]

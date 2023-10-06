@@ -3,7 +3,7 @@ const oxbldkrItems = [
   {
     id: 'oxbldkr_back_limit_china',
     ver: ['limit'],
-    image: './images/item/oxbldkr_back_limit_china.jpeg',
+    image: './images/item/china/oxbldkr_back_limit_china.jpeg',
     buyLink: 'https://www.oxbldkr.com/index.php/wap/goods/detail?goods_id=7159',
     title: '',
     brand: ['MP'],
@@ -13,5 +13,6 @@ const oxbldkrItems = [
     shipping: 'back',
     onlyFelix: false,
     ribbon: '',
+    fansite: 'china',
   },
 ]

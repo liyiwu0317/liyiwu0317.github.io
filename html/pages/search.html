@@ -7,10 +7,30 @@
 
   <div class="row w3-margin-bottom">
     <div class="col">
+      <select id="fansiteSelection" class="form-select" onchange="onFansiteChanged(this, 'search');">
+        <option selected>选择站子</option>
+        <option value="china">菲首</option>
+        <option value="gem">宝石</option>
+      </select>
+    </div>
+
+    <div class="col">
       <select id="shippingSelection" class="form-select" onchange="onShippingChanged(this, 'search');">
         <option selected>选择运回或拆卡</option>
         <option value="back">运回</option>
         <option value="non-back">拆卡</option>
+      </select>
+    </div>
+  </div>
+
+  <div class="row w3-margin-bottom">
+    <div class="col">
+      <select id="platformSelection" class="form-select" onchange="onPlatformChanged(this, 'search', 'brandSelection');">
+        <option selected>选择版本</option>
+        <option value="limit">限量版</option>
+        <option value="rr">普版</option>
+        <option value="p">P版</option>
+        <option value="h">H版</option>
       </select>
     </div>
 
@@ -42,16 +62,6 @@
 
   <div class="row">
     <div class="col">
-      <select id="platformSelection" class="form-select" onchange="onPlatformChanged(this, 'search', 'brandSelection');">
-        <option selected>选择版本</option>
-        <option value="limit">限量版</option>
-        <option value="rr">普版</option>
-        <option value="p">P版</option>
-        <option value="h">H版</option>
-      </select>
-    </div>
-
-    <div class="col">
       <div class="form-check">
         <input class="form-check-input" type="checkbox" value="" id="onlyFelixCheckbox" onchange="onCheckboxChanged(this)">
         <label class="form-check-label" for="flexCheckDefault">
@@ -61,6 +71,9 @@
     </div>
   </div>
 
+  <div class="row w3-margin-bottom">
+  </div>
+
 </h3>
 
 <!-- Content -->
@@ -68,7 +81,7 @@
 </div>
 
 <!-- Modal -->
-<div id="wmQRcode" class="w3-modal">
+<!-- <div id="wmQRcode" class="w3-modal">
   <div class="w3-modal-content w3-animate-zoom" style="padding:16px">
     <div class="w3-container w3-white w3-center">
       <i onclick="document.getElementById('wmQRcode').style.display='none'" class="fa fa-remove w3-right w3-button w3-transparent w3-xxlarge"></i>
@@ -86,7 +99,7 @@
       <img src="./images/back-abc_ms-gem-qrcode.jpg" class="w3-left w3-margin-right" style="width: 100%">
     </div>
   </div>
-</div>
+</div> -->
 
 <script>
   totalItems = getUniqueItems(totalItems);
