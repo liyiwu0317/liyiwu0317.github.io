@@ -1,7 +1,8 @@
 const Options = {
-  "ver": ["limit", "abc", "d"],
+  "ver": ["limit", "rr", "p", "h"],
   "brand": [
     "am",
+    "ald",
     "bdm",
     "bdn",
     "el",
@@ -24,6 +25,7 @@ const Options = {
 }
 const brandMap = {
   "am": "AM",
+  "ald": "ALD",
   "bdm": "BDM",
   "bdn": "BDN",
   "el": "EL",
@@ -52,7 +54,10 @@ let totalItems = [
   ...idoustageItems,
   ...oxbldkrItems,
   ...yzyItems,
-  ...wdItems,
+  ...kramItems,
+  ...kpopmerchItems,
+  ...wdChinaItems,
+  ...wdGemItems,
   ...backItems,
   ...nonBackItems,
 ];

@@ -10,7 +10,7 @@ const k4Items = [
     hit: [],
     descLink: '',
     price: '¥ ',
-    shipping: '',
+    shipping: 'back',
     onlyFelix: false,
     ribbon: '',
   },

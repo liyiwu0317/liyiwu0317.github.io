@@ -1,0 +1,10 @@
+<div id="productTitleWd"></div>
+<div id="productContentWd" class="row row-cols-2 row-cols-md-4 g-3"></div>
+
+<script>
+  document.getElementById('productTitleWd').innerHTML = addTitle(wdChinaTitle);
+
+  for (const item of wdChinaItems) {
+    document.getElementById('productContentWd').innerHTML += addItem(item);
+  }
+</script>
