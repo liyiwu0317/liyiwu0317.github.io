@@ -301,7 +301,7 @@ function addItem(item) {
   // title, brand
   aa += `<div class="c-title">${item.title}</div>`;
   for (const brand of item.brand) {
-    aa += `<span class="badge bg-primary-subtle border border-primary-subtle text-primary-emphasis rounded-pill">${brand}</span>`;
+    aa += `<span class="badge border border-primary-subtle text-primary-emphasis badge-font-weight rounded">${brand}</span>`;
   }
 
   // hit

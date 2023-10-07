@@ -61,3 +61,7 @@ h1,h2,h3,h4,h5,h6{
   font-weight: 600;
   color: white;
 }
+
+.badge-font-weight {
+  font-weight: 400;
+}

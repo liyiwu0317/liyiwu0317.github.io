@@ -31,6 +31,7 @@ const srItems = [
     allVersion: false,
     ribbon: '',
     fansite: 'china',
+    soldOut: true,
   },
   {
     id: 'sr_back_rr_china',
@@ -128,6 +129,7 @@ const srItems = [
     allVersion: false,
     ribbon: '',
     fansite: 'gem',
+    soldOut: true,
   },
   {
     id: 'sr_back_rr_gem',
@@ -160,6 +162,22 @@ const srItems = [
     allVersion: false,
     ribbon: '',
     fansite: 'gem',
+  },
+  {
+    id: 'sr_back_p_1_gem',
+    ver: ['p'],
+    image: './images/item/gem/sr_back_p_1_gem.jpeg',
+    buyLink: 'http://m.liveonepick.com/#/?productId=0d33f7f5b6844ff39e83b38aaac16e37',
+    title: '【宝石】P版 指定封面',
+    brand: [],
+    hit: [],
+    descLink: '',
+    price: '¥ 46',
+    shipping: 'back',
+    onlyFelix: true,
+    ribbon: '',
+    fansite: 'gem',
+    soldOut: true,
   },
   {
     id: 'sr_back_h_gem',
