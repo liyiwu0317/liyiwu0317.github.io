@@ -15,5 +15,6 @@ const k4Items = [
     allVersion: false,
     ribbon: '',
     fansite: '',
+    soldOut: false,
   },
 ]

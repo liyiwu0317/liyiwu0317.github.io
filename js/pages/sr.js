@@ -78,6 +78,7 @@ const srItems = [
     onlyFelix: true,
     ribbon: '',
     fansite: 'china',
+    soldOut: true,
   },
   {
     id: 'sr_back_h_china',

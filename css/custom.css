@@ -46,3 +46,18 @@ h1,h2,h3,h4,h5,h6{
   font-weight: 600;
   color: #c62828;
 }
+
+.sold-out-top-left {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  background: rgba(0,0,0,.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+  border-radius: 5px;
+  z-index: 9;
+  font-weight: 600;
+  color: white;
+}

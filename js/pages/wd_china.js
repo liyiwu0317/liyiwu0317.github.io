@@ -31,6 +31,7 @@ const wdChinaItems = [
     allVersion: false,
     ribbon: '',
     fansite: 'china',
+    soldOut: true,
   },
   {
     id: 'wd_back_sw_china',
@@ -47,6 +48,7 @@ const wdChinaItems = [
     allVersion: false,
     ribbon: '',
     fansite: 'china',
+    soldOut: true,
   },
   {
     id: 'wd_back_bdm_china',

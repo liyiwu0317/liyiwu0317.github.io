@@ -15,6 +15,7 @@ const wdGemItems = [
     allVersion: false,
     ribbon: '',
     fansite: 'gem',
+    soldOut: true,
   },
   {
     id: 'wd_back_bdm_gem',

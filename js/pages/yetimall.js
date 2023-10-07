@@ -158,6 +158,7 @@ const yetimallItems = [
     onlyFelix: true,
     ribbon: '',
     fansite: 'gem',
+    soldOut: true,
   },
   {
     id: 'yetimall_back_p_ald_2_gem',

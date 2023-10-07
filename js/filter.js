@@ -276,6 +276,9 @@ function addItem(item) {
 
   // image
   aa += `<div class="w3-display-container">`;
+  if (item.soldOut) {
+    aa += `<div class="sold-out-top-left"><span>售罄</span></div>`;
+  }
   if (item.ribbon) {
     aa += `<div class="ribbon ribbon-top-right"><span>${item.ribbon}</span></div>`;
   }
