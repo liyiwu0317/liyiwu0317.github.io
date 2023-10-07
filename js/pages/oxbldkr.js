@@ -12,6 +12,7 @@ const oxbldkrItems = [
     price: '¥ 738/套',
     shipping: 'back',
     onlyFelix: false,
+    allVersion: false,
     ribbon: '',
     fansite: 'china',
   },

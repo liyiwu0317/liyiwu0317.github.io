@@ -75,7 +75,7 @@ function getUniqueItems (items) {
   return uniqueItems;
 }
 
-function findMatchItems(items, ver, brand, shipping, onlyFelix, fansite) {
+function findMatchItems(items, ver, brand, shipping, onlyFelix, fansite, allVersion) {
   let showItems = [];
   let hideItems = [];
 
@@ -98,7 +98,8 @@ function findMatchItems(items, ver, brand, shipping, onlyFelix, fansite) {
       (!brand || x.brand.includes(brandMap[brand])) &&
       (!shipping || x.shipping === shipping) &&
       (!onlyFelix || x.onlyFelix) &&
-      (!fansite || x.fansite.includes(fansite))
+      (!fansite || x.fansite.includes(fansite)) &&
+      (!allVersion || x.allVersion)
     ) {
       showItems.push(x.id);
     } else {
@@ -136,11 +137,12 @@ function onFansiteChanged(option, page) {
   let fansite = option.value;
   let shipping = $(`#shippingSelection`).val();
   let onlyFelix = document.getElementById("onlyFelixCheckbox");
+  let allVersion = document.getElementById("allVersionCheckbox");
   let items = [];
 
   if (page === 'search') items = totalItems;
 
-  const objs = findMatchItems(items, ver, brand, shipping, onlyFelix ? onlyFelix.checked : null, fansite);
+  const objs = findMatchItems(items, ver, brand, shipping, onlyFelix ? onlyFelix.checked : null, fansite, allVersion ? allVersion.checked : null);
 
   for (const id of objs.showItems) {
     changeToShow(id);
@@ -157,11 +159,12 @@ function onShippingChanged(option, page) {
   let fansite = $(`#fansiteSelection`).val();
   let shipping = option.value;
   let onlyFelix = document.getElementById("onlyFelixCheckbox");
+  let allVersion = document.getElementById("allVersionCheckbox");
   let items = [];
 
   if (page === 'search') items = totalItems;
 
-  const objs = findMatchItems(items, ver, brand, shipping, onlyFelix ? onlyFelix.checked : null, fansite);
+  const objs = findMatchItems(items, ver, brand, shipping, onlyFelix ? onlyFelix.checked : null, fansite, allVersion ? allVersion.checked : null);
 
   for (const id of objs.showItems) {
     changeToShow(id);
@@ -178,13 +181,14 @@ function onPlatformChanged(option, page, otherSelection) {
   let fansite = $(`#fansiteSelection`).val();
   let shipping = $(`#shippingSelection`).val();
   let onlyFelix = document.getElementById("onlyFelixCheckbox");
+  let allVersion = document.getElementById("allVersionCheckbox");
   let items = [];
 
   if (page === 'back') items = backItems;
   else if (page === 'non-back') items = nonBackItems;
   else if (page === 'search') items = totalItems;
 
-  const objs = findMatchItems(items, ver, brand, shipping, onlyFelix ? onlyFelix.checked : null, fansite);
+  const objs = findMatchItems(items, ver, brand, shipping, onlyFelix ? onlyFelix.checked : null, fansite, allVersion ? allVersion.checked : null);
 
   for (const id of objs.showItems) {
     changeToShow(id);
@@ -201,13 +205,14 @@ function onBrandChanged(option, page, otherSelection) {
   let fansite = $(`#fansiteSelection`).val();
   let shipping = $(`#shippingSelection`).val();
   let onlyFelix = document.getElementById("onlyFelixCheckbox");
+  let allVersion = document.getElementById("allVersionCheckbox");
   let items = [];
 
   if (page === 'back') items = backItems;
   else if (page === 'non-back') items = nonBackItems;
   else if (page === 'search') items = totalItems;
 
-  const objs = findMatchItems(items, ver, brand, shipping, onlyFelix ? onlyFelix.checked : null, fansite);
+  const objs = findMatchItems(items, ver, brand, shipping, onlyFelix ? onlyFelix.checked : null, fansite, allVersion ? allVersion.checked : null);
 
   for (const id of objs.showItems) {
     changeToShow(id);
@@ -224,11 +229,34 @@ function onCheckboxChanged(checkboxElem) {
   let fansite = $(`#fansiteSelection`).val();
   let shipping = $(`#shippingSelection`).val();
   let onlyFelix = checkboxElem;
+  let allVersion = document.getElementById("allVersionCheckbox");
   let items = [];
 
   items = totalItems;
 
-  const objs = findMatchItems(items, ver, brand, shipping, onlyFelix.checked, fansite);
+  const objs = findMatchItems(items, ver, brand, shipping, onlyFelix.checked, fansite, allVersion ? allVersion.checked : null);
+
+  for (const id of objs.showItems) {
+    changeToShow(id);
+  }
+
+  for (const id of objs.hideItems) {
+    changeToHide(id);
+  }
+}
+
+function onAllVerCheckboxChanged(checkboxElem) {
+  let brand = $(`#brandSelection`).val();
+  let ver = $(`#platformSelection`).val();
+  let fansite = $(`#fansiteSelection`).val();
+  let shipping = $(`#shippingSelection`).val();
+  let onlyFelix = document.getElementById("onlyFelixCheckbox");
+  let allVersion = checkboxElem;
+  let items = [];
+
+  items = totalItems;
+
+  const objs = findMatchItems(items, ver, brand, shipping, onlyFelix ? onlyFelix.checked : null, fansite, allVersion.checked);
 
   for (const id of objs.showItems) {
     changeToShow(id);

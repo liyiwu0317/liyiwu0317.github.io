@@ -12,6 +12,7 @@ const k4Items = [
     price: '¥ ',
     shipping: 'back',
     onlyFelix: false,
+    allVersion: false,
     ribbon: '',
     fansite: '',
   },

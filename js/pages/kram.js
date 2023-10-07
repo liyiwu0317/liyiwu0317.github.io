@@ -1,6 +1,22 @@
 const kramTitle = 'KR-AM音像店';
 const kramItems = [
   {
+    id: 'kram_back_all_china',
+    ver: ['limit', 'rr', 'p', 'h'],
+    image: './images/item/china/kram_back_all_china.jpeg',
+    buyLink: 'https://weidian.com/item.html?itemID=6684045464',
+    title: '',
+    brand: [],
+    hit: ['一键毕业', '1限+2普+1P+1H'],
+    descLink: 'https://weibo.com/6375947740/NmJrAalJD',
+    price: '¥ 306',
+    shipping: 'back',
+    onlyFelix: false,
+    allVersion: true,
+    ribbon: '',
+    fansite: 'china',
+  },
+  {
     id: 'kram_back_limit_yes24_china',
     ver: ['limit'],
     image: './images/item/china/kram_back_limit_yes24_china.jpeg',
@@ -12,6 +28,7 @@ const kramItems = [
     price: '¥ 90',
     shipping: 'back',
     onlyFelix: false,
+    allVersion: false,
     ribbon: '',
     fansite: 'china',
   },
