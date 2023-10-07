@@ -5,7 +5,7 @@ const oxbldkrItems = [
     ver: ['limit'],
     image: './images/item/china/oxbldkr_back_limit_china.jpeg',
     buyLink: 'https://www.oxbldkr.com/index.php/wap/goods/detail?goods_id=7159',
-    title: '',
+    title: '【菲首】限量版 (1套8张)',
     brand: ['MP'],
     hit: [],
     descLink: '',

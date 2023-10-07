@@ -2,10 +2,10 @@ const kpopmerchTitle = 'Kpopmerch';
 const kpopmerchItems = [
   {
     id: 'kpopmerch_back_china',
-    ver: ['limit', 'rr', 'p', 'h'],
+    ver: ['rr', 'p', 'h'],
     image: './images/item/china/kpopmerch_back_china.jpeg',
     buyLink: 'https://weidian.com/item.html?itemID=6680688767',
-    title: '',
+    title: '【菲首】普通版 / P版 / H版',
     brand: [],
     hit: [],
     descLink: '',
@@ -18,10 +18,10 @@ const kpopmerchItems = [
   },
   {
     id: 'kpopmerch_back_gem',
-    ver: ['limit', 'rr', 'p', 'h'],
+    ver: ['rr', 'p', 'h'],
     image: './images/item/gem/kpopmerch_back_gem.jpeg',
     buyLink: 'https://weidian.com/item.html?itemID=6680761851',
-    title: '',
+    title: '【宝石】普通版 / P版 / H版',
     brand: [],
     hit: [],
     descLink: '',
