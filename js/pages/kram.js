@@ -94,6 +94,22 @@ const kramItems = [
   },
   // gem
   {
+    id: 'kram_back_all_gem',
+    ver: ['limit', 'rr', 'p', 'h'],
+    image: './images/item/gem/kram_back_all_gem.jpeg',
+    buyLink: 'https://weidian.com/item.html?itemID=6684128732',
+    title: '',
+    brand: [],
+    hit: ['一键毕业', '1限+2普+1P+1H'],
+    descLink: 'https://weibo.com/5947554719/NmJAXzd0d',
+    price: '¥ 306',
+    shipping: 'back',
+    onlyFelix: false,
+    allVersion: true,
+    ribbon: '',
+    fansite: 'gem',
+  },
+  {
     id: 'kram_back_rr_yes24_gem',
     ver: ['rr'],
     image: './images/item/gem/kram_back_rr_yes24_gem.jpeg',
