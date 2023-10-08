@@ -19,7 +19,10 @@ const Options = {
     "yzy",
     "yzy-v2",
     "sr",
-    "ny"
+    "ny",
+    "target",
+    "bn",
+    "fnac"
   ],
   "shipping": ["back", "non-back"],
   "fansite": ["china", "gem"],
@@ -43,7 +46,10 @@ const brandMap = {
   "yzy": "一直娱",
   "yzy-v2": "一直娱 2.0",
   "sr": "星河",
-  "ny": "楠艺"
+  "ny": "楠艺",
+  "target": "美网TARGET",
+  "bn": "美网BN",
+  "fnac": "法特Fnac",
 }
 
 let totalItems = [
