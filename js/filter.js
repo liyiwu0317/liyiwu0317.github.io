@@ -26,7 +26,7 @@ const Options = {
 }
 const brandMap = {
   "am": "AM",
-  "ald": "ALD",
+  "ald": "阿拉丁",
   "bdm": "BDM",
   "bdn": "BDN",
   "el": "EL",

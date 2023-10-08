@@ -43,7 +43,7 @@
         <option value="mp">MP</option>
         <option value="bdm">BDM</option>
         <option value="sw">SW</option>
-        <option value="ald">ALD</option>
+        <option value="ald">阿拉丁</option>
         <!-- <option value="am">AM</option> -->
         <!-- <option value="bdn">BDN</option> -->
         <!-- <option value="el">EL</option> -->
@@ -65,7 +65,12 @@
       <div class="form-check">
         <input class="form-check-input" type="checkbox" value="" id="onlyFelixCheckbox" onchange="onCheckboxChanged(this)">
         <label class="form-check-label" for="flexCheckDefault">
-          <div class="w3-medium">指定李龙馥</div>
+          <div class="w3-medium">
+            <span>指定李龙馥</span>
+            <span onclick="document.getElementById('specifyTable').style.display='block'">
+              <i class="fa-solid fa-circle-info"></i>
+            </span>
+          </div>
         </label>
       </div>
     </div>
@@ -109,6 +114,65 @@
     </div>
   </div>
 </div> -->
+<div id="specifyTable" class="w3-modal">
+  <div class="w3-modal-content w3-animate-zoom" style="padding:16px">
+    <div class="w3-container w3-white">
+      <i onclick="document.getElementById('specifyTable').style.display='none'" class="fa fa-remove w3-right w3-button w3-transparent w3-xlarge"></i>
+      <h5 class="w3-wide">指定李龙馥</h5>
+      <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th scope="col"></th>
+        <th scope="col">普版</th>
+        <th scope="col">P版</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">封面</th>
+        <td></td>
+        <td>1+1</td>
+      </tr>
+      <tr>
+        <th scope="row">JYP</th>
+        <td>8+1</td>
+        <td></td>
+      </tr>
+      <tr>
+        <th scope="row">MK</th>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <th scope="row">YES24</th>
+        <td>1+1</td>
+        <td></td>
+      </tr>
+      <tr>
+        <th scope="row">MP</th>
+        <td>8+1</td>
+        <td>2+2</td>
+      </tr>
+      <tr>
+        <th scope="row">BDM</th>
+        <td>1+1</td>
+        <td></td>
+      </tr>
+      <tr>
+        <th scope="row">SW</th>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <th scope="row">阿拉丁</th>
+        <td></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+    </div>
+  </div>
+</div>
 
 <script>
   totalItems = getUniqueItems(totalItems);
