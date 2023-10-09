@@ -274,11 +274,11 @@ function onAllVerCheckboxChanged(checkboxElem) {
 }
 
 function addTitle(title) {
-  return `<h3 class="w3-container w3-padding-16"><b>${title}</b></h3>`;
+  return `<h4 class="w3-container w3-padding-16"><b>${title}</b></h4>`;
 }
 
 function addItem(item) {
-  let aa = `<div id="${item.id}" class="col">` + `<div class="card h-100">`;
+  let aa = `<div id="${item.id}" class="col">` + `<div class="card h-100 card-box">`;
 
   // image
   aa += `<div class="w3-display-container">`;
