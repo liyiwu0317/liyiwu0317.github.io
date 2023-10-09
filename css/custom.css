@@ -69,6 +69,10 @@ h1,h2,h3,h4,h5,h6{
   color: #f3432c;
 }
 
+.c-text {
+  padding-bottom: 5px;
+}
+
 .sold-out-top-left {
   position: absolute;
   top: 5px;
