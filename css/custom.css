@@ -40,6 +40,8 @@ h1,h2,h3,h4,h5,h6{
 
 .c-hr {
   border-top-color: black;
+  margin-top: 15px;
+  margin-bottom: 15px;
 }
 
 .c-radius {
@@ -73,6 +75,10 @@ h1,h2,h3,h4,h5,h6{
   padding-bottom: 5px;
 }
 
+.c-search-title {
+  padding-bottom: 0px !important;
+}
+
 .sold-out-top-left {
   position: absolute;
   top: 5px;
@@ -95,6 +101,7 @@ h1,h2,h3,h4,h5,h6{
 .content-margin {
   margin-left: 0px;
   margin-right: 0px;
+  margin-bottom: 15px;
 }
 
 .menu-padding {

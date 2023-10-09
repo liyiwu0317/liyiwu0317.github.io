@@ -290,9 +290,9 @@ function addItem(item) {
   }
   aa += `<img src="${item.image}" class="card-img-top">` + '<div class="w3-display-middle w3-display-hover">';
   if (item.modalID) {
-    aa += `<button class="w3-button w3-black" onClick="document.getElementById('${item.modalID}').style.display='block'" >购买 <i class="fa fa-shopping-cart"></i></button>`;
+    aa += `<button class="w3-button w3-black rounded-pill" onClick="document.getElementById('${item.modalID}').style.display='block'" >购买 <i class="fa fa-shopping-cart"></i></button>`;
   } else {
-    aa += `<button class="w3-button w3-black" onClick="parent.open('${item.buyLink}')">购买 <i class="fa fa-shopping-cart"></i>'</button>`;
+    aa += `<button class="w3-button w3-black rounded-pill" onClick="parent.open('${item.buyLink}')">购买 <i class="fa fa-shopping-cart"></i>'</button>`;
   }
   aa += '</div>' + '</div>';
 
