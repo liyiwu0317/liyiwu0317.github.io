@@ -15,16 +15,6 @@
     </div>
 
     <div class="col">
-      <select id="shippingSelection" class="form-select" onchange="onShippingChanged(this, 'search');">
-        <option selected>运回或拆卡</option>
-        <option value="back">运回</option>
-        <option value="non-back">拆卡</option>
-      </select>
-    </div>
-  </div>
-
-  <div class="row w3-margin-bottom">
-    <div class="col">
       <select id="platformSelection" class="form-select" onchange="onPlatformChanged(this, 'search', 'brandSelection');">
         <option selected>版本</option>
         <option value="limit">限量版</option>
@@ -63,13 +53,21 @@
     </div>
   </div>
 
-  <div class="row">
+  <div class="row w3-margin-bottom">
+    <div class="col">
+      <select id="shippingSelection" class="form-select" onchange="onShippingChanged(this, 'search');">
+        <option selected>运回或拆卡</option>
+        <option value="back">运回</option>
+        <option value="non-back">拆卡</option>
+      </select>
+    </div>
+
     <div class="col">
       <div class="form-check">
         <input class="form-check-input" type="checkbox" value="" id="onlyFelixCheckbox" onchange="onCheckboxChanged(this)">
         <label class="form-check-label" for="flexCheckDefault">
           <div class="w3-medium">
-            <span>指定李龙馥</span>
+            <span>指定</span>
             <span onclick="document.getElementById('specifyTable').style.display='block'">
               <i class="fa-solid fa-circle-info"></i>
             </span>
@@ -87,10 +85,6 @@
       </div>
     </div>
   </div>
-
-  <div class="row w3-margin-bottom">
-  </div>
-
 </h4>
 
 <!-- Content -->
