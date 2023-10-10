@@ -1,4 +1,4 @@
-const kramTitle = 'KR-AM音像店';
+const kramTitle = 'KR-AM音像店 (KMS)';
 const kramItems = [
   {
     id: 'kram_back_all_china',

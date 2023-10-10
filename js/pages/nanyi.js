@@ -64,6 +64,21 @@ const nanyiItems = [
     ribbon: '',
     fansite: 'china',
   },
+  {
+    id: 'ny_back_rr_mk_china',
+    ver: ['rr'],
+    image: './images/item/china/ny_back_rr_mk_china.jpeg',
+    buyLink: 'https://www.nanyiglobal.com/2310skzmkpb11set-2-62722853',
+    title: '【菲首】MK普版1+1',
+    brand: ['MK'],
+    hit: [],
+    descLink: '',
+    price: '¥ 154',
+    shipping: 'back',
+    onlyFelix: true,
+    ribbon: '',
+    fansite: 'china',
+  },
   // gem
   {
     id: 'ny_back_limit_gem',
