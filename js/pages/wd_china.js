@@ -48,7 +48,7 @@ const wdChinaItems = [
     allVersion: false,
     ribbon: '',
     fansite: 'china',
-    soldOut: true,
+    soldOut: false,
   },
   {
     id: 'wd_back_bdm_china',

@@ -41,6 +41,16 @@ const goodsItems = [
     price: '¥ 66',
   },
   {
+    id: 'pillow',
+    image: './images/goods/pillow.jpeg',
+    buyLink: 'https://weidian.com/item.html?itemID=6695131419',
+    title: '【菲首】慵懒午后·小鸡抱枕',
+    brand: [],
+    hit: [],
+    descLink: 'https://weibo.com/6375947740/Nnd6xCQzJ',
+    price: '¥ 39.9',
+  },
+  {
     id: 'card-book',
     image: './images/goods/card-book.jpeg',
     buyLink: 'https://weidian.com/item.html?itemID=6662838382',
