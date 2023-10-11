@@ -22,6 +22,7 @@ const Options = {
     "ny",
     "target",
     "bn",
+    "walmart",
     "fnac"
   ],
   "shipping": ["back", "non-back"],
@@ -49,6 +50,7 @@ const brandMap = {
   "ny": "楠艺",
   "target": "美网TARGET",
   "bn": "美网BN",
+  "walmart": "美网Walmart",
   "fnac": "法特Fnac",
 }
 

@@ -80,4 +80,21 @@ const k4Items = [
     ribbon: '',
     fansite: 'china',
   },
+  // gem
+  {
+    id: 'k4_back_all_gem',
+    ver: ['rr', 'p', 'h'],
+    image: './images/item/gem/k4_back_all_gem.jpeg',
+    buyLink: 'https://cn.ktown4u.com/iteminfo?grp_no=10660176&fanc_goods_no=270726&goods_no=101425',
+    title: '【宝石】一键毕业',
+    brand: [],
+    hit: ['2普+1P+1H'],
+    descLink: 'https://weibo.com/5947554719/NnmtN1TwB',
+    price: '¥ 242',
+    shipping: 'back',
+    onlyFelix: false,
+    allVersion: true,
+    ribbon: '',
+    fansite: 'gem',
+  },
 ]

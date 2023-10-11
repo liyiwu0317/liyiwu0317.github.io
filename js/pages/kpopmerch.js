@@ -18,10 +18,10 @@ const kpopmerchItems = [
   },
   {
     id: 'kpopmerch_back_gem',
-    ver: ['rr', 'p', 'h'],
+    ver: ['limit', 'rr', 'p', 'h'],
     image: './images/item/gem/kpopmerch_back_gem.jpeg',
     buyLink: 'https://weidian.com/item.html?itemID=6680761851',
-    title: '【宝石】普版 / P版 / H版',
+    title: '【宝石】限量版 / 普版 / P版 / H版',
     brand: [],
     hit: [],
     descLink: '',

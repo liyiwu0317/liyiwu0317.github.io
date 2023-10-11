@@ -1,6 +1,22 @@
 const bearTitle = '熊宝';
 const bearItems = [
   {
+    id: 'bear_back_all_china',
+    ver: ['limit', 'rr', 'p', 'h'],
+    image: './images/item/china/bear_back_all_china.jpeg',
+    buyLink: 'https://weidian.com/item.html?itemID=6698120841',
+    title: '【菲首】一键毕业',
+    brand: ['JYP', 'MK'],
+    hit: ['1限+2普+1P+1H'],
+    descLink: '',
+    price: '¥ 382',
+    shipping: 'back',
+    onlyFelix: false,
+    allVersion: true,
+    ribbon: '',
+    fansite: 'china',
+  },
+  {
     id: 'bear_back_china',
     ver: ['rr', 'p', 'h'],
     image: './images/item/china/bear_back_china.jpeg',
