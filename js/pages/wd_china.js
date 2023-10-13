@@ -121,7 +121,7 @@ const wdChinaItems = [
     buyLink: 'https://weidian.com/item.html?itemID=6690150900',
     title: '【菲首】法特Fnac',
     brand: ['法特Fnac'],
-    hit: [],
+    hit: ['Fnac特典明信片'],
     descLink: '',
     price: '¥ 208',
     shipping: 'non-back',

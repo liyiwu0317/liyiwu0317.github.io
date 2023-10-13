@@ -72,7 +72,7 @@ const wdGemItems = [
     buyLink: 'https://weidian.com/item.html?itemID=6689145667',
     title: '【宝石】法特Fnac',
     brand: ['法特Fnac'],
-    hit: [],
+    hit: ['Fnac特典明信片'],
     descLink: '',
     price: '¥ 209',
     shipping: 'non-back',
