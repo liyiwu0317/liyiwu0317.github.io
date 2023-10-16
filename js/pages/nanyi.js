@@ -78,7 +78,7 @@ const nanyiItems = [
     onlyFelix: true,
     ribbon: '',
     fansite: 'china',
-    soldOut: false,
+    soldOut: true,
   },
   // gem
   {
