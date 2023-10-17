@@ -288,6 +288,9 @@ function addItem(item) {
   if (item.soldOut) {
     aa += `<div class="sold-out-top-left"><span>售罄</span></div>`;
   }
+  if (item.shipping === 'non-back') {
+    aa += `<div class="non-back-top-right"><span>拆卡</span></div>`;
+  }
   if (item.ribbon) {
     aa += `<div class="ribbon ribbon-top-right"><span>${item.ribbon}</span></div>`;
   }

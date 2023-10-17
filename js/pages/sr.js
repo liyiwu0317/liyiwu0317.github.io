@@ -104,7 +104,7 @@ const srItems = [
     buyLink: 'http://m.liveonepick.com/#/?productId=22ff41ffadf34362868ebcd2a40f7c51',
     title: '【菲首】普版',
     brand: ['AM'],
-    hit: ['拆卡可指定所有成员'],
+    hit: ['可指定成员'],
     descLink: '',
     price: '¥ 64',
     shipping: 'non-back',
