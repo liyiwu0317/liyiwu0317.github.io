@@ -23,7 +23,7 @@ const mmtshopItems = [
     image: './images/item/china/mmtshoop_back_rr_mmt_china.jpeg',
     buyLink: '',
     modalID: 'mmtFelixQRcode',
-    title: '【菲首】普版1+1',
+    title: '【菲首】MMT普版1+1',
     brand: ['MMT'],
     hit: [],
     descLink: '',
