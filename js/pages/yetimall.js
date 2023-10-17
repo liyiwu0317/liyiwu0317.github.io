@@ -22,7 +22,7 @@ const yetimallItems = [
     image: './images/item/china/yetimall_back_rr_china.jpeg',
     buyLink: 'https://www.yetimall.fun/h5/#/pages/store/goodsDetail/goodsDetail?gid=8761',
     title: '【菲首】普版',
-    brand: ['JYP', 'MK', 'YES24', 'MP', 'BDM', 'SW', '阿拉丁'],
+    brand: ['JYP', 'MK', 'MP', 'BDM', 'SW', 'WM', 'MMT'],
     hit: [],
     descLink: '',
     price: '¥ 69~84',

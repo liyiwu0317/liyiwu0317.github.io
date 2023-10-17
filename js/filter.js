@@ -65,6 +65,7 @@ let totalItems = [
   ...yzyItems,
   ...kramItems,
   ...kpopmerchItems,
+  ...mmtshopItems,
   ...wdChinaItems,
   ...wdGemItems,
   ...backItems,

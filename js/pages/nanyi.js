@@ -22,7 +22,7 @@ const nanyiItems = [
     image: './images/item/china/ny_back_rr_china.jpeg',
     buyLink: 'https://www.nanyiglobal.com/2310skzpbpo-9',
     title: '【菲首】普版',
-    brand: ['JYP', 'MK', 'YES24', 'MP', 'BDM', 'SW', '阿拉丁'],
+    brand: ['JYP', 'MK', 'YES24', 'MP', 'BDM', 'SW', '阿拉丁', 'WM', 'MMT'],
     hit: [],
     descLink: '',
     price: '¥ 67.5~82.5',

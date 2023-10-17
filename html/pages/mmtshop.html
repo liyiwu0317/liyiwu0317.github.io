@@ -1,0 +1,30 @@
+<div id="productTitleWd"></div>
+<div id="productContentWd" class="row row-cols-2 row-cols-md-4 row-cols-xl-5 row-cols-xxl-6 g-3 content-margin"></div>
+
+<script>
+  document.getElementById('productTitleWd').innerHTML = addTitle(mmtshopTitle);
+
+  for (const item of mmtshopItems) {
+    document.getElementById('productContentWd').innerHTML += addItem(item);
+  }
+</script>
+
+<div id="mmtQRcode" class="w3-modal">
+  <div class="w3-modal-content w3-animate-zoom" style="padding:16px">
+    <div class="w3-container w3-white w3-center">
+      <i onclick="document.getElementById('mmtQRcode').style.display='none'" class="fa fa-remove w3-right w3-button w3-transparent w3-xxlarge"></i>
+      <h2 class="w3-wide">MMT特典普版</h2>
+      <img src="./images/item/china/mmtshoop_back_rr_qrcode_china.jpeg" class="w3-left w3-margin-right" style="width: 100%">
+    </div>
+  </div>
+</div>
+
+<div id="mmtFelixQRcode" class="w3-modal">
+  <div class="w3-modal-content w3-animate-zoom" style="padding:16px">
+    <div class="w3-container w3-white w3-center">
+      <i onclick="document.getElementById('mmtFelixQRcode').style.display='none'" class="fa fa-remove w3-right w3-button w3-transparent w3-xxlarge"></i>
+      <h2 class="w3-wide">MMT特典普版1+1</h2>
+      <img src="./images/item/china/mmtshoop_back_rr_mmt_qrcode_china.jpeg" class="w3-left w3-margin-right" style="width: 100%">
+    </div>
+  </div>
+</div>
