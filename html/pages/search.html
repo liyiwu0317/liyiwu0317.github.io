@@ -27,6 +27,9 @@
     <div class="col">
       <select id="brandSelection" class="form-select" onchange="onBrandChanged(this, 'search', 'platformSelection');">
         <option selected>特典</option>
+        <option value="sr">SR</option>
+        <option value="ms">MS</option>
+        <option value="el">EL</option>
         <option value="wm">WM</option>
         <option value="mmt">MMT</option>
         <option value="am">AM</option>
@@ -44,11 +47,8 @@
         <option value="walmart">美网Walmart</option>
         <option value="fnac">法特Fnac</option>
         <!-- <option value="bdn">BDN</option> -->
-        <!-- <option value="el">EL</option> -->
         <!-- <option value="k4">K4</option> -->
-        <!-- <option value="ms">MS</option> -->
         <!-- <option value="yzy-v2">一直娱 2.0</option> -->
-        <!-- <option value="sr">星河</option> -->
         <!-- <option value="ny">楠艺</option> -->
       </select>
     </div>
@@ -133,6 +133,27 @@
   </div>
 </div>
 
+<div id="msQRcode" class="w3-modal">
+  <div class="w3-modal-content w3-animate-zoom" style="padding:16px">
+    <div class="w3-container w3-white w3-center">
+      <i onclick="document.getElementById('msQRcode').style.display='none'" class="fa fa-remove w3-right w3-button w3-transparent w3-xxlarge"></i>
+      <h2 class="w3-wide">MS特典普版</h2>
+      <img src="./images/item/china/ms_back_rr_qrcode_china.jpeg" class="w3-left w3-margin-right" style="width: 100%">
+    </div>
+  </div>
+</div>
+
+<div id="msFelixQRcode" class="w3-modal">
+  <div class="w3-modal-content w3-animate-zoom" style="padding:16px">
+    <div class="w3-container w3-white w3-center">
+      <i onclick="document.getElementById('msFelixQRcode').style.display='none'" class="fa fa-remove w3-right w3-button w3-transparent w3-xxlarge"></i>
+      <h2 class="w3-wide">MS特典普版1+1</h2>
+      <img src="./images/item/china/ms_back_rr_ms_qrcode_china.jpeg" class="w3-left w3-margin-right" style="width: 100%">
+    </div>
+  </div>
+</div>
+
+<!-- table -->
 <div id="specifyTable" class="w3-modal">
   <div class="w3-modal-content w3-animate-zoom" style="padding:16px">
     <div class="w3-container w3-white">
@@ -219,6 +240,21 @@
           <tr>
             <th scope="row">一直娱</th>
             <td>1+1</td>
+            <td></td>
+          </tr>
+          <tr>
+            <th scope="row">SR</th>
+            <td>拆卡可指定成员</td>
+            <td></td>
+          </tr>
+          <tr>
+            <th scope="row">MS</th>
+            <td>1+1</td>
+            <td></td>
+          </tr>
+          <tr>
+            <th scope="row">EL</th>
+            <td>可指定成员</td>
             <td></td>
           </tr>
         </tbody>
