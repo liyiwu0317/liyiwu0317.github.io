@@ -4,7 +4,7 @@
 <script>
   document.getElementById('productTitleSR').innerHTML = addTitle(srTitle);
 
-  for (const item of srItems) {
+  for (const item of getUniqueItems(srItems)) {
     document.getElementById('productContentSR').innerHTML += addItem(item);
   }
 </script>

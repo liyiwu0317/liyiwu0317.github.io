@@ -1,6 +1,7 @@
 const Options = {
   "ver": ["limit", "rr", "p", "h"],
   "brand": [
+    'mix',
     "am",
     "ald",
     "bdm",
@@ -82,7 +83,19 @@ function getUniqueItems (items) {
       uniqueItems.push(x);
     }
   })
-  return uniqueItems;
+
+  // reorder
+  let onSaleItems = [];
+  let soldOutItems = [];
+  uniqueItems.forEach(x => {
+    if (x.soldOut) {
+      soldOutItems.push(x);
+    } else {
+      onSaleItems.push(x);
+    }
+  })
+
+  return [...onSaleItems,...soldOutItems];
 }
 
 function findMatchItems(items, ver, brand, shipping, onlyFelix, fansite, allVersion) {
@@ -105,7 +118,7 @@ function findMatchItems(items, ver, brand, shipping, onlyFelix, fansite, allVers
   items.forEach(x => {
     if(
       (!ver || x.ver.includes(ver)) &&
-      (!brand || x.brand.includes(brandMap[brand])) &&
+      (!brand || x.brand.includes(brandMap[brand]) || (brand === 'mix' && x.brandMix)) &&
       (!shipping || x.shipping === shipping) &&
       (!onlyFelix || x.onlyFelix) &&
       (!fansite || x.fansite.includes(fansite)) &&

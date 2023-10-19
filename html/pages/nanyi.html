@@ -4,7 +4,7 @@
 <script>
   document.getElementById('productTitleNanyi').innerHTML = addTitle(nanyiTitle);
 
-  for (const item of nanyiItems) {
+  for (const item of getUniqueItems(nanyiItems)) {
     document.getElementById('productContentNanyi').innerHTML += addItem(item);
   }
 </script>

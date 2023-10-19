@@ -4,7 +4,7 @@
 <script>
   document.getElementById('productTitleK4').innerHTML = addTitle(k4Title);
 
-  for (const item of k4Items) {
+  for (const item of getUniqueItems(k4Items)) {
     document.getElementById('productContentK4').innerHTML += addItem(item);
   }
 </script>

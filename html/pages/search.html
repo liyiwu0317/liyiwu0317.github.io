@@ -27,6 +27,7 @@
     <div class="col">
       <select id="brandSelection" class="form-select" onchange="onBrandChanged(this, 'search', 'platformSelection');">
         <option selected>特典</option>
+        <option value="mix">自由组合</option>
         <option value="sr">SR</option>
         <option value="ms">MS</option>
         <option value="el">EL</option>
@@ -287,8 +288,7 @@
 </div>
 
 <script>
-  totalItems = getUniqueItems(totalItems);
-  for (const item of totalItems) {
+  for (const item of getUniqueItems(totalItems)) {
     document.getElementById('searchContent').innerHTML += addItem(item);
   }
 </script>

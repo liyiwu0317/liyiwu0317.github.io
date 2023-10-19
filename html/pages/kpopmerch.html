@@ -4,7 +4,7 @@
 <script>
   document.getElementById('productTitleWd').innerHTML = addTitle(kpopmerchTitle);
 
-  for (const item of kpopmerchItems) {
+  for (const item of getUniqueItems(kpopmerchItems)) {
     document.getElementById('productContentWd').innerHTML += addItem(item);
   }
 </script>

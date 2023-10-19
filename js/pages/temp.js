@@ -16,5 +16,6 @@ const k4Items = [
     ribbon: '',
     fansite: '',
     soldOut: false,
+    brandMix: false,
   },
 ]

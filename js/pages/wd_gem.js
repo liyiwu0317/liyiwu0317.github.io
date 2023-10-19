@@ -60,6 +60,7 @@ const wdGemItems = [
     onlyFelix: false,
     ribbon: '',
     fansite: 'gem',
+    brandMix: true,
   },
   {
     id: 'wd_back_ff_3_gem',
@@ -75,6 +76,7 @@ const wdGemItems = [
     onlyFelix: true,
     ribbon: '',
     fansite: 'gem',
+    brandMix: true,
   },
   {
     id: 'wd_non_back_ff_3_gem',
@@ -90,6 +92,7 @@ const wdGemItems = [
     onlyFelix: true,
     ribbon: '',
     fansite: 'gem',
+    brandMix: true,
   },
   {
     id: 'wd_non_back_el_kms_gem',
@@ -105,6 +108,7 @@ const wdGemItems = [
     onlyFelix: true,
     ribbon: '',
     fansite: 'gem',
+    brandMix: true,
   },
   {
     id: 'wd_non_back_sr_gem',

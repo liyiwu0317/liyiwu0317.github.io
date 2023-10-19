@@ -4,7 +4,7 @@
 <script>
   document.getElementById('productTitleWd').innerHTML = addTitle(wdGemTitle);
 
-  for (const item of wdGemItems) {
+  for (const item of getUniqueItems(wdGemItems)) {
     document.getElementById('productContentWd').innerHTML += addItem(item);
   }
 </script>
