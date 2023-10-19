@@ -77,7 +77,7 @@ const wdChinaItems = [
     ribbon: '',
     fansite: 'china',
   },
-   {
+  {
     id: 'wd_non_back_kms_china',
     ver: ['rr'],
     image: './images/item/china/wd_non_back_kms_china.jpeg',
