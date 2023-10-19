@@ -295,7 +295,7 @@ function addItem(item) {
   if (item.ribbon) {
     aa += `<div class="ribbon ribbon-top-right"><span>${item.ribbon}</span></div>`;
   }
-  aa += `<img src="${item.image}" class="card-img-top">` + '<div class="w3-display-middle w3-display-hover">';
+  aa += `<img data-src="${item.image}" class="lazyload card-img-top">` + '<div class="w3-display-middle w3-display-hover">';
   if (item.modalID) {
     aa += `<button class="w3-button w3-black rounded-pill" onClick="document.getElementById('${item.modalID}').style.display='block'" >购买 <i class="fa-solid fa-arrow-right"></i></button>`;
   } else {
