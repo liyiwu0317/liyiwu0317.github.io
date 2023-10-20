@@ -75,6 +75,21 @@ const k4Items = [
     ribbon: '',
     fansite: 'china',
   },
+  {
+    id: 'k4_non_back_k4_china',
+    ver: ['rr'],
+    image: './images/item/china/k4_non_back_k4_china.jpeg',
+    buyLink: 'https://cn.ktown4u.com/iteminfo?grp_no=10664378&fanc_goods_no=272470&goods_no=101245',
+    title: '【菲首】普版',
+    brand: ['K4'],
+    hit: ['可指定成员'],
+    descLink: 'https://weibo.com/6375947740/NoGPCd5PK',
+    price: '¥ 68',
+    shipping: 'non-back',
+    onlyFelix: true,
+    ribbon: '',
+    fansite: 'china',
+  },
   // gem
   {
     id: 'k4_back_all_gem',
